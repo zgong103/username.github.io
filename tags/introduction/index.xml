@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>introduction on Third year project</title>
+    <link>https://zgong103.github.io/username.github.io/tags/introduction/</link>
+    <description>Recent content in introduction on Third year project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zgong103.github.io/username.github.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Simple Introduction</title>
+      <link>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</guid>
+      <description>Introduction In this page, we first provides a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:
+  Methods for estmating the number of strong factors:
+ IC Method: information criteria based methods (Bai and Ng, 2002).</description>
+    </item>
+    
+  </channel>
+</rss>
