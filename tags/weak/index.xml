@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>weak on Third year project</title>
+    <link>https://zgong103.github.io/username.github.io/tags/weak/</link>
+    <description>Recent content in weak on Third year project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zgong103.github.io/username.github.io/tags/weak/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 1</title>
+      <link>https://zgong103.github.io/username.github.io/project/project1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/project/project1/</guid>
+      <description>My third year paper.</description>
+    </item>
+    
+    <item>
+      <title>BCV Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/bcv-method/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/bcv-method/</guid>
+      <description>1. Introduction Instead of estimating the number of detectable factors, one may prefer estimating the number of useful factors (including strong and useful weak factors). The number of useful factors recover an underlying signal matrix $X = LF$ in the factor model more precisely than using the true number of factors or detectable factors. The BCV method is designed to estimate the number of useful factors in heteroscedastic noise for high dimensional data based on bi-cross-validation, using randomly held-out submatrices of the data matrix.</description>
+    </item>
+    
+    <item>
+      <title>NE Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/ne-method/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/ne-method/</guid>
+      <description>1. Introduction Instead of assuming $L^{&#39;}L/N \rightarrow \Sigma_{L}$ for strong factors, it is assumed that $L^{&#39;}L \rightarrow \Sigma_{L}$ as $N, T \rightarrow \infty$ for weak factors. The results from random matrix theory (RMT) show that, even for white noise case $\Sigma_{e} = \sigma^{2}I_{N}$, PCA estimators of the loadings and factors are inconsistent as $N, T \rightarrow \infty$.
+Specifically, there exists a phase transition phenomenon in the limit: if the $k$-th largest eigenvalue of population covariance matrix ${\Sigma}_{Y}$ less than the threshold $(\sqrt{N/T}+1) \sigma^{2}$, it has little chance to detect of the $k$-th factor using PCA or MLE as $T, N \rightarrow \infty$.</description>
+    </item>
+    
+    <item>
+      <title>Generate weak factors</title>
+      <link>https://zgong103.github.io/username.github.io/post/generate-weak-factors/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/generate-weak-factors/</guid>
+      <description>Before introducing the methods to estimate the number of strong and weak factors for high dimensional data, let me first introduce how to genernate the weak factors in the DGP and corresponding R codes. Consider the factor model as:
+$$ Y = X + \Sigma^{\frac{1}{2}}E = \Sigma^{\frac{1}{2}} (\sqrt{T} \hat{U} \hat{D} \hat{V}&amp;rsquo; + E), $$
+where $\sqrt{T} \hat{U} \hat{D} \hat{V}^{&#39;}$ is the singular value decomposition (SVD) for $\Sigma^{-\frac{1}{2}}X$ with $\hat{U} \in \mathbb{R}^{N\times \min (N,T)}$, $\hat{V} \in \mathbb{R}^{T \times \min (N,T)}$, $\hat{D}= \text{diag} (\hat{d}_{1}, \hat{d}_{2}, \cdots, \hat{d}_{\min (N, T)})$, $\hat{U}&#39; \hat{U} = \hat{V}&#39; \hat{V} = I_{\min (N, T)}$, and $\hat{d}_{1} \geq \hat{d}_{2} \geq , \cdots, \geq \hat{d}_{\min (N, T)}$.</description>
+    </item>
+    
+  </channel>
+</rss>

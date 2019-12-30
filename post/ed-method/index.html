@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ED Method</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://zgong103.github.io/username.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.0" />
+        
+
+        
+
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
+
+        
+
+    </head>
+
+    <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">ED Method</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/username.github.io/">Home</a></li>
+                            
+                                <li><a href="/username.github.io/about/">About</a></li>
+                            
+                                <li><a href="/username.github.io/post/">Posts</a></li>
+                            
+                                <li><a href="/username.github.io/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/username/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>ED Method</h2>
+        <h5>December 29, 2019</h5>
+        
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="1-introduction">1. Introduction</h2>
+<p>The ED estimator is defined as</p>
+<p><code>$$\hat{r}_{\mathrm{ED}} = \max \left\{r \leq r_{max}: \lambda_{r} - \lambda_{r+1} \geq \delta\right\},$$</code></p>
+<p>where $\delta$ is some fixed number, $\lambda_{i}$ is the $i$-th largest eigenvalue of  $\hat{\Sigma}_{Y}$. This method estimates the number of factors by exploiting the structure of idiosyncratic terms using the results from RMT. It explicitly allows serial and cross-sectional correlation in the error terms in the assumption.</p>
+<p>An advantage of this method comparing with the IC method is that the consistency of the ED estimator can allow for much weaker strength of the factors: instead of growing in the order of $O(N)$, the smallest eigenvalue of $L'L$ are just required to diverge in probability as $N \rightarrow \infty$. The algorithm for choosing $\delta$ and estimating the number of factors is:</p>
+<ol>
+<li>Compute eigenvalues $\lambda_{1}, \ldots, \lambda_{n}$ of the sample covariance matrix $X X^{\prime} / T$. Set $j=r_{\text {max }}+1 .$</li>
+<li>Compute $\hat{\beta}$, the slope coefficient in the OLS regression
+of $\lambda_{j}, \ldots, \lambda_{j+4},$ on the constant and $(j-1)^{2 / 3}, \ldots,(j+3)^{2/3}.$ Set $\delta=2|\hat{\beta}|$.</li>
+<li>Compute $\hat{r}(\delta) = \max {\lambda_{i}-\lambda_{i+1} \geq \delta }$ or if $\lambda_{i}-\lambda_{i+1} &lt; \delta$ for all $i \leq r_{\text {max }}^{n},$ set $\hat{r}(\delta)=0$.</li>
+<li>Set $j=\hat{r}(\delta)+1 .$ Repeat steps 2 and 3 until conver-
+gence.</li>
+</ol>
+<p>For the details of this method, please refer <a href="https://www.mitpressjournals.org/doi/abs/10.1162/REST_a_00043?journalCode=rest">Onatski, 2010</a>.</p>
+<h2 id="2-r-codes">2. R codes</h2>
+<p>Based on the algorithm above, we can write the R code for the ED method as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">EigenDiff <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(Y, rmax <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, niter <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>) {
+
+  N <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">nrow</span>(Y)
+  T <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(Y)
+
+  <span style="color:#75715e"># Compute eigenvalues of the sample covariance matrix</span>
+  ev <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">svd</span>(Y)<span style="color:#f92672">$</span>d^2 <span style="color:#f92672">/</span> N  
+  N <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">length</span>(ev)
+
+  <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">is.null</span>(rmax))                    <span style="color:#75715e"># Set a value for rmax</span>
+    rmax <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">sqrt</span>(N)
+  j <span style="color:#f92672">&lt;-</span> rmax <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+  diffs <span style="color:#f92672">&lt;-</span> ev <span style="color:#f92672">-</span> <span style="color:#a6e22e">c</span>(ev[<span style="color:#ae81ff">-1</span>], <span style="color:#ae81ff">0</span>)            <span style="color:#75715e"># adjacent eigenvalues difference</span>
+
+  <span style="color:#a6e22e">for </span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>niter) {
+    y <span style="color:#f92672">&lt;-</span> ev[j<span style="color:#f92672">:</span>(j<span style="color:#ae81ff">+4</span>)]
+    x <span style="color:#f92672">&lt;-</span> ((j<span style="color:#ae81ff">-1</span>)<span style="color:#f92672">:</span>(j<span style="color:#ae81ff">+3</span>))<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>)
+    lm.coef <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(y <span style="color:#f92672">~</span> x)
+    delta <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">abs</span>(lm.coef<span style="color:#f92672">$</span>coef[2])   <span style="color:#75715e"># choose delta in step 2</span>
+
+    <span style="color:#75715e"># select the the adjacent eigen differences larger than delta</span>
+    idx <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">which</span>(diffs[1<span style="color:#f92672">:</span>rmax] <span style="color:#f92672">&gt;</span> delta)
+
+    <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">length</span>(idx) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+      hatr <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0</span>
+    else hatr <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">max</span>(idx) <span style="color:#75715e"># select the largest eigen difference</span>
+
+    newj <span style="color:#f92672">=</span> hatr <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    <span style="color:#a6e22e">if </span>(newj <span style="color:#f92672">==</span> j) break
+    j <span style="color:#f92672">=</span> newj              <span style="color:#75715e"># Repeat until convergence  </span>
+  }
+  <span style="color:#a6e22e">return</span>(hatr)
+}</code></pre></div>
+<h2 id="3-strong-factor-estimation-and-robustness-check">3. Strong factor estimation and robustness check</h2>
+<p>Simulation design: we use the <!-- raw HTML omitted --> same DGP <!-- raw HTML omitted --> for generating strong factors as the IC method:</p>
+<p>\begin{equation}
+Y_{it} = \sum_{j=1}^{r}\lambda_{ij} F_{tj}  + e_{it}, \quad \text{where}\<br>
+\lambda_{ij}, F_{tj} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1),\<br>
+\end{equation}
+$$\text{with} \quad e_{i t} = \rho_{1} e_{i t-1} + (1-\rho_{1}^2)^{1/2} \xi_{it},$$
+$$\text{and} \quad \xi_{i t} = \rho_{2} \xi_{i-1, t} + (1-\rho_{2}^2)^{1/2} \epsilon_{it}, \quad \epsilon_{it} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1).$$</p>
+<p>We let $r=5$,  and consider the three cases for $e_{it}$ below:</p>
+<ul>
+<li>
+<p><strong>Case I:</strong>   high serial correlation only, $\rho_{1} = 0.9$ and $\rho_{2} = 0$;</p>
+</li>
+<li>
+<p><strong>Case II:</strong>  high cross-sectional correlation only, $\rho_{1} = 0$ and $\rho_{2} = 0.8$;</p>
+</li>
+<li>
+<p><strong>Case III:</strong> non-guassion distributions only, $\rho_{1} = \rho_{2} = 0$. For example, we can chosse gamma distribution for $e_{it}$ with mean zero and variance 0.5.</p>
+</li>
+</ul>
+<p>The corresponding R code of applying the ED method for this DGP is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">S <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">10</span>                   <span style="color:#75715e"># Number of Simulation</span>
+N_set <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>)
+T_set <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>)
+NT_comb <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">expand.grid</span>(N_set, T_set)  <span style="color:#75715e"># Combination of N and T pairs</span>
+
+r_hat_ED <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, S, <span style="color:#ae81ff">4</span>)
+Factor_ED <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>,<span style="color:#a6e22e">nrow</span>(NT_comb),<span style="color:#ae81ff">6</span>)
+<span style="color:#a6e22e">colnames</span>(Factor_ED) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">N&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">white&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">serial&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cross&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">gamma&#34;</span>)
+
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(NT_comb)){
+  <span style="color:#a6e22e">for</span>(s in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>S){
+
+    <span style="color:#75715e"># Data generating process</span>
+    N <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">1</span>]
+    T <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">2</span>]
+
+    F_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(T<span style="color:#f92672">*</span>r), T, r)  <span style="color:#75715e"># generating factor matrix</span>
+    L_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N<span style="color:#f92672">*</span>r), N, r)  <span style="color:#75715e"># generating loading matrix</span>
+
+    <span style="color:#75715e"># DGP for generating strong factors in white noise</span>
+    e_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N<span style="color:#f92672">*</span>T), N, T)  
+    X <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_0   
+
+    <span style="color:#75715e"># DGP for generating strong factors in high serially correlated noise</span>
+    rho1 <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.8</span>
+    e_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, N, T)
+    e_1[, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">for </span>(t in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(T<span style="color:#ae81ff">-1</span>)) {
+      e_1[, t<span style="color:#ae81ff">+1</span>] <span style="color:#f92672">&lt;-</span> e_1[, t]<span style="color:#f92672">*</span>rho1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> rho1^2)<span style="color:#f92672">*</span><span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    }
+    X1 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_1
+
+
+    <span style="color:#75715e"># DGP for generating strong factors in high cross-sectionally</span>
+    <span style="color:#75715e"># correlated noise</span>
+    rho2 <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.8</span>
+    e_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, N, T)
+    e_2[1,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(T, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">for </span>(n in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(N<span style="color:#ae81ff">-1</span>)) {
+      e_2[n<span style="color:#ae81ff">+1</span> , ] <span style="color:#f92672">&lt;-</span> e_2[n, ]<span style="color:#f92672">*</span>rho2 <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> rho2^2)<span style="color:#f92672">*</span><span style="color:#a6e22e">rnorm</span>(T, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    }
+    X2 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_2
+
+    <span style="color:#75715e"># DGP for generating strong factors in noise with gamma distribution</span>
+    e_3 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rgamma</span>(N <span style="color:#f92672">*</span> T, <span style="color:#ae81ff">0.25</span>, scale <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>), nrow <span style="color:#f92672">=</span> N)
+    X3 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_3
+
+    <span style="color:#75715e"># Apply the ED method to estimate the number of strong factors</span>
+    <span style="color:#75715e"># in the DGP:</span>
+    r_hat_ED[s,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EigenDiff</span>(X, niter<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, rmax<span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>)
+    r_hat_ED[s,<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EigenDiff</span>(X1, niter<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, rmax<span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>)
+    r_hat_ED[s,<span style="color:#ae81ff">3</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EigenDiff</span>(X2, niter<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, rmax<span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>)
+    r_hat_ED[s,<span style="color:#ae81ff">4</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EigenDiff</span>(X3, niter<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, rmax<span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>)
+  }
+    Factor_ED[i,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(N,T,<span style="color:#a6e22e">colMeans</span>(r_hat_ED))
+}</code></pre></div>
+<p>The results of the ER method for estimating the number of strong factors with different types of error terms are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">       N   T white serial cross gamma
+[1,]  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">50</span>   <span style="color:#ae81ff">5.1</span>    <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">4.3</span>   <span style="color:#ae81ff">4.7</span>
+[2,] <span style="color:#ae81ff">100</span>  <span style="color:#ae81ff">50</span>   <span style="color:#ae81ff">5.0</span>    <span style="color:#ae81ff">5.4</span>   <span style="color:#ae81ff">5.1</span>   <span style="color:#ae81ff">6.0</span>
+[3,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span>   <span style="color:#ae81ff">5.0</span>    <span style="color:#ae81ff">4.9</span>   <span style="color:#ae81ff">4.9</span>   <span style="color:#ae81ff">5.9</span>
+[4,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">100</span>   <span style="color:#ae81ff">5.0</span>    <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">6.1</span>
+[5,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span>   <span style="color:#ae81ff">5.0</span>    <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">6.1</span>
+[6,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">200</span>   <span style="color:#ae81ff">5.0</span>    <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">5.0</span>   <span style="color:#ae81ff">6.1</span></code></pre></div>
+<p>From the results above, we can see that the ED method is robust when the error terms in the factor model are high serially and cross-sectionally correlated. It is not robust when we have non-gaussian distributed error terms in the factor model, however.</p>
+<h2 id="4-weak-factor-estimation">4. Weak factor estimation</h2>
+<p>An advantage of the ED method comparing with the IC and ER methods is that the consistency of the ED estimator can allow for much weaker strength of the factors. To show this, let's apply the ED method to <!-- raw HTML omitted --> the DGP <!-- raw HTML omitted --> that we used to generate weak factors before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">Factor_ED_weak <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>,<span style="color:#a6e22e">nrow</span>(NT_comb),<span style="color:#ae81ff">3</span>)
+<span style="color:#a6e22e">colnames</span>(Factor_ED_weak) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">N&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">r_hat_NE&#34;</span>)
+
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(NT_comb)){
+  <span style="color:#a6e22e">for</span>(s in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>S){
+
+    <span style="color:#75715e"># Data generating process</span>
+    N <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">1</span>]
+    T <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">2</span>]
+    X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">DGP_weak</span>(N,T,<span style="color:#ae81ff">5</span>)<span style="color:#f92672">$</span>Y
+
+    <span style="color:#75715e"># Apply the ED method to estimate the number of</span>
+    <span style="color:#75715e"># strong factors in the DGP:    </span>
+    r_hat_ED[s,] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EigenDiff</span>(X, niter<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, rmax<span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span>)
+  }
+    Factor_ED_weak[i,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(N,T,<span style="color:#a6e22e">mean</span>(r_hat_ED))
+}</code></pre></div>
+<p>The goal is to estimation the number of strong and useful weak factors in the DGP. The results of the ED method to estimate the number of weak factors in the DGP are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">       N   T r_hat_ED
+[1,]  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">50</span>      <span style="color:#ae81ff">2.7</span>
+[2,] <span style="color:#ae81ff">100</span>  <span style="color:#ae81ff">50</span>      <span style="color:#ae81ff">3.5</span>
+[3,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span>      <span style="color:#ae81ff">3.0</span>
+[4,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">100</span>      <span style="color:#ae81ff">3.4</span>
+[5,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span>      <span style="color:#ae81ff">3.3</span>
+[6,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">200</span>      <span style="color:#ae81ff">3.5</span></code></pre></div>
+<p>From the results above, we can see that the ED method can estimate the number of strong and useful weak factors in the DGP very well in finte samples.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/ne-method/">NE Method</a></h4>
+    <h5>December 30, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/bcv-method/">BCV Method</a></h4>
+    <h5>December 30, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/ic-method/">IC Method</a></h4>
+    <h5>December 29, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+        <h4 class="page-header">Comments</h4>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "username" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
+        </footer>
+
+        
+
+    </body>
+
+</html>
+

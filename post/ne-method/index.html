@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NE Method</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://zgong103.github.io/username.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.0" />
+        
+
+        
+
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
+
+        
+
+    </head>
+
+    <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">NE Method</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/username.github.io/">Home</a></li>
+                            
+                                <li><a href="/username.github.io/about/">About</a></li>
+                            
+                                <li><a href="/username.github.io/post/">Posts</a></li>
+                            
+                                <li><a href="/username.github.io/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/username/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>NE Method</h2>
+        <h5>December 30, 2019</h5>
+        
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="1-introduction">1. Introduction</h2>
+<p>Instead of assuming <code>$L^{'}L/N \rightarrow \Sigma_{L}$</code> for strong factors, it is assumed that <code>$L^{'}L \rightarrow \Sigma_{L}$</code> as $N, T \rightarrow \infty$ for weak factors. The results from random matrix theory (RMT) show that, even for white noise case $\Sigma_{e} = \sigma^{2}I_{N}$, PCA estimators of the loadings and factors are inconsistent as $N, T \rightarrow \infty$.</p>
+<p>Specifically, there exists a phase transition phenomenon in the limit: if the $k$-th largest eigenvalue of population covariance matrix <code>${\Sigma}_{Y}$</code> less than the threshold $(\sqrt{N/T}+1) \sigma^{2}$, it has little chance to detect of the $k$-th factor using PCA or MLE as $T, N \rightarrow \infty$.  Define the number of detectable factors as <code>$\# \{ i \leq N : \xi_{i} &gt;  (\sqrt{N/T}+1) \sigma^{2} \}$</code>, where $\xi_{i}$ is the $i$-th largest eigenvalue of ${\Sigma}_{Y}$, then one goal is to estimate the number of detectable factors.</p>
+<p>The NE method is designed to estimate the number of detectable factors in white noise for high dimensional data using the results from RMT, which studies the distribution of the sample eigenvalues. The idea of the NE method is that they use the distributional properties of the factor-free $(r=0)$ sample eigenvalues to approximate the distributional properties of the $N-r$ sample eigenvalues in $\hat{\Sigma}_{Y}$, assuming the number of factors is $r$ and $r \ll N$. The NE estimator is defined as</p>
+<p><code>$$ \hat{r}_{\mathrm{SE}} =\underset{r}{\arg \min }\left\{\frac{\beta}{4}\left[\frac{T}{N}\right]^{2} t_{r}^{2}\right\}+2(r+1) \text { for } r \in \mathbb{N}: 0 \leq r&lt;\min (N, T), $$</code></p>
+<p>where</p>
+<p><code>$$ t_{r} =\left[(N-r) \frac{\sum_{i=r+1}^{N} {\lambda}_{i}^{2}}{\left(\sum_{i=r+1}^{N} {\lambda}_{i}\right)^{2}}-\left(1+\frac{N}{T}\right)\right] N- \left(\frac{2}{\beta} - 1\right)\frac{N}{T}. $$</code></p>
+<p>For the details of this method, please refer <a href="https://ieeexplore.ieee.org/document/4493413">Nadakuditi and Edelman, 2008</a>.</p>
+<h2 id="2-r-codes">2. R codes</h2>
+<p>Based on this algorithm, we can write the R code for the BCV method as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">NE <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(X){
+
+  N <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">nrow</span>(X);
+  n <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(X);
+
+  sv <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">svd</span>(X)<span style="color:#f92672">$</span>d^2<span style="color:#f92672">/</span>n
+  sv2 <span style="color:#f92672">&lt;-</span> sv^2
+
+  M <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">min</span>(N,n)
+
+  tvalues <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sapply</span>(<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span>M, <span style="color:#a6e22e">function</span>(k) {
+    t <span style="color:#f92672">&lt;-</span> ((N <span style="color:#f92672">-</span> k) <span style="color:#f92672">*</span> <span style="color:#a6e22e">sum</span>(sv2<span style="color:#a6e22e">[</span>(k <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)<span style="color:#f92672">:</span>M])<span style="color:#f92672">/</span>(<span style="color:#a6e22e">sum</span>(sv<span style="color:#a6e22e">[</span>(k <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)<span style="color:#f92672">:</span>M])^2)
+          <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> N<span style="color:#f92672">/</span>n)) <span style="color:#f92672">*</span> N <span style="color:#f92672">-</span> N<span style="color:#f92672">/</span>n
+    <span style="color:#a6e22e">return</span>(t)
+  })
+
+  k_hat <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">which.min</span>(n<span style="color:#f92672">/</span>N^2 <span style="color:#f92672">*</span> tvalues^2 <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span>M <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+
+  <span style="color:#a6e22e">return</span>(k_hat)
+}</code></pre></div>
+<h2 id="3-strong-factor-estimation-and-robustness-check">3. Strong factor estimation and robustness check</h2>
+<p>Simulation design: we use the following DGP <!-- raw HTML omitted --> for generating strong factors:</p>
+<p>\begin{equation}
+Y_{it} = \sum_{j=1}^{r}\lambda_{ij} F_{tj}  + e_{it}, \quad \text{where}\<br>
+\lambda_{ij}, F_{tj} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1),\<br>
+\end{equation}
+$$\text{with} \quad e_{i t} = \rho_{1} e_{i t-1} + (1-\rho_{1}^2)^{1/2} \xi_{it},$$
+$$\text{and} \quad \xi_{i t} = \rho_{2} \xi_{i-1, t} + (1-\rho_{2}^2)^{1/2} \epsilon_{it}, \quad \epsilon_{it} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1).$$</p>
+<p>We let $r=5$,  and consider the three cases for $e_{it}$ below:</p>
+<ul>
+<li>
+<p><strong>Case I:</strong>   high serial correlation only, $\rho_{1} = 0.9$ and $\rho_{2} = 0$;</p>
+</li>
+<li>
+<p><strong>Case II:</strong>  high cross-sectional correlation only, $\rho_{1} = 0$ and $\rho_{2} = 0.8$;</p>
+</li>
+<li>
+<p><strong>Case III:</strong> non-guassion distributions only, $\rho_{1} = \rho_{2} = 0$. For example, we can chosse gamma distribution for $e_{it}$ with mean zero and variance 0.5.</p>
+</li>
+</ul>
+<p>The corresponding R code of applying the NE method for this DGP is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">S <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">10</span>                   <span style="color:#75715e"># Number of Simulation</span>
+N_set <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>)
+T_set <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>)
+NT_comb <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">expand.grid</span>(N_set, T_set)  <span style="color:#75715e"># Combination of N and T pairs</span>
+
+r_hat_NE <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, S, <span style="color:#ae81ff">4</span>)
+Factor_NE <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>,<span style="color:#a6e22e">nrow</span>(NT_comb),<span style="color:#ae81ff">6</span>)
+<span style="color:#a6e22e">colnames</span>(Factor_NE) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">N&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">white&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">serial&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cross&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">gamma&#34;</span>)
+
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(NT_comb)){
+  <span style="color:#a6e22e">for</span>(s in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>S){
+
+    <span style="color:#75715e"># Data generating process</span>
+    N <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">1</span>]
+    T <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">2</span>]
+    F_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(T<span style="color:#f92672">*</span>r), T, r)  <span style="color:#75715e"># generating factor matrix</span>
+    L_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N<span style="color:#f92672">*</span>r), N, r)  <span style="color:#75715e"># generating loading matrix</span>
+
+    <span style="color:#75715e"># DGP for generating strong factors in white noise</span>
+    e_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N<span style="color:#f92672">*</span>T), N, T)  
+    X <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_0   
+
+    <span style="color:#75715e"># DGP for generating strong factors in high serially correlated noise</span>
+    rho1 <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.8</span>
+    e_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, N, T)
+    e_1[, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">for </span>(t in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(T<span style="color:#ae81ff">-1</span>)) {
+      e_1[, t<span style="color:#ae81ff">+1</span>] <span style="color:#f92672">&lt;-</span> e_1[, t]<span style="color:#f92672">*</span>rho1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> rho1^2)<span style="color:#f92672">*</span><span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    }
+    X1 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_1
+
+
+   <span style="color:#75715e"># DGP for generating strong factors in high cross-sectionally</span>
+   <span style="color:#75715e"># correlated noise</span>
+    rho2 <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.8</span>
+    e_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, N, T)
+    e_2[1,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(T, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">for </span>(n in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(N<span style="color:#ae81ff">-1</span>)) {
+      e_2[n<span style="color:#ae81ff">+1</span> , ] <span style="color:#f92672">&lt;-</span> e_2[n, ]<span style="color:#f92672">*</span>rho2 <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> rho2^2)<span style="color:#f92672">*</span><span style="color:#a6e22e">rnorm</span>(T, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    }
+    X2 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_2
+
+    <span style="color:#75715e"># DGP for generating strong factors in noise with gamma distribution</span>
+    e_3 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rgamma</span>(N <span style="color:#f92672">*</span> T, <span style="color:#ae81ff">0.25</span>, scale <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>), nrow <span style="color:#f92672">=</span> N)
+    X3 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_3
+
+    <span style="color:#75715e"># Apply the NE method to estimate the number of strong factors</span>
+    <span style="color:#75715e"># in the DGP:</span>
+    r_hat_NE[s,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">NE</span>(X)
+    r_hat_NE[s,<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">NE</span>(X1)
+    r_hat_NE[s,<span style="color:#ae81ff">3</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">NE</span>(X2)
+    r_hat_NE[s,<span style="color:#ae81ff">4</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">NE</span>(X3)
+  }
+    Factor_NE[i,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(N,T,<span style="color:#a6e22e">colMeans</span>(r_hat_NE))
+}</code></pre></div>
+<p>The results of the NE method for estimating the number of strong factors with different types of error terms are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">       N   T white serial cross gamma
+[1,]  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">50</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">12.3</span>  <span style="color:#ae81ff">13.2</span>   <span style="color:#ae81ff">6.0</span>
+[2,] <span style="color:#ae81ff">100</span>  <span style="color:#ae81ff">50</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">17.8</span>  <span style="color:#ae81ff">18.2</span>   <span style="color:#ae81ff">6.2</span>
+[3,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">13.2</span>  <span style="color:#ae81ff">15.1</span>   <span style="color:#ae81ff">6.0</span>
+[4,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">100</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">22.9</span>  <span style="color:#ae81ff">22.4</span>   <span style="color:#ae81ff">6.0</span>
+[5,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span>     <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">9.8</span>  <span style="color:#ae81ff">16.9</span>   <span style="color:#ae81ff">6.0</span>
+[6,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">200</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">22.1</span>  <span style="color:#ae81ff">25.6</span>   <span style="color:#ae81ff">6.0</span></code></pre></div>
+<p>From the results above, we can see that the NE method is not robust when when the error terms in the factor model are high serially and cross-sectionally correlated, or have non-gaussian distribution.</p>
+<h2 id="4-weak-factor-estimation">4. Weak factor estimation</h2>
+<p>The NE method is designed to estimate the number of detectable weak factors with white noise in high dimensional data. To show this, we can apply the NE method to <!-- raw HTML omitted --> the DGP <!-- raw HTML omitted --> that we used to generate weak factors before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">r_hat_NE <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, S, <span style="color:#ae81ff">1</span>)
+Factor_NE_weak <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>,<span style="color:#a6e22e">nrow</span>(NT_comb),<span style="color:#ae81ff">3</span>)
+<span style="color:#a6e22e">colnames</span>(Factor_NE_weak) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">n&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">r_hat_NE&#34;</span>)
+
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(NT_comb)){
+  <span style="color:#a6e22e">for</span>(s in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>S){
+
+    <span style="color:#75715e"># Data generating process</span>
+    N <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">1</span>]
+    T <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">2</span>]
+    X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">DGP_weak</span>(N,T,<span style="color:#ae81ff">5</span>)<span style="color:#f92672">$</span>Y
+
+    <span style="color:#75715e"># Apply the NE method to estimate the number of strong factors</span>
+    <span style="color:#75715e"># in the DGP:    </span>
+    r_hat_NE[s,] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">NE</span>(X)
+  }
+    Factor_NE_weak[i,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(N,T,<span style="color:#a6e22e">mean</span>(r_hat_NE))
+}</code></pre></div>
+<p>The goal is to estimation the number of strong and useful weak factors in the DGP. The results of the NE method to estimate the number of weak factors in the DGP are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">       N   T r_hat_NE
+[1,]  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">50</span>      <span style="color:#ae81ff">2.4</span>
+[2,] <span style="color:#ae81ff">100</span>  <span style="color:#ae81ff">50</span>      <span style="color:#ae81ff">2.7</span>
+[3,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span>      <span style="color:#ae81ff">2.0</span>
+[4,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">100</span>      <span style="color:#ae81ff">2.0</span>
+[5,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span>      <span style="color:#ae81ff">2.0</span>
+[6,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">200</span>      <span style="color:#ae81ff">2.0</span></code></pre></div>
+<p>From the results above, we can see that the NE method can estimate the number of strong and useful factors in the DGP quite well in finite samples.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/bcv-method/">BCV Method</a></h4>
+    <h5>December 30, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/ic-method/">IC Method</a></h4>
+    <h5>December 29, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/er-method/">ER Method</a></h4>
+    <h5>December 29, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+        <h4 class="page-header">Comments</h4>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "username" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
+        </footer>
+
+        
+
+    </body>
+
+</html>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>strong on Third year project</title>
+    <link>https://zgong103.github.io/username.github.io/tags/strong/</link>
+    <description>Recent content in strong on Third year project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zgong103.github.io/username.github.io/tags/strong/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 1</title>
+      <link>https://zgong103.github.io/username.github.io/project/project1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/project/project1/</guid>
+      <description>My third year paper.</description>
+    </item>
+    
+    <item>
+      <title>ED Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/ed-method/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/ed-method/</guid>
+      <description>1. Introduction The ED estimator is defined as
+$$\hat{r}_{\mathrm{ED}} = \max \left\{r \leq r_{max}: \lambda_{r} - \lambda_{r+1} \geq \delta\right\},$$
+where $\delta$ is some fixed number, $\lambda_{i}$ is the $i$-th largest eigenvalue of $\hat{\Sigma}_{Y}$. This method estimates the number of factors by exploiting the structure of idiosyncratic terms using the results from RMT. It explicitly allows serial and cross-sectional correlation in the error terms in the assumption.
+An advantage of this method comparing with the IC method is that the consistency of the ED estimator can allow for much weaker strength of the factors: instead of growing in the order of $O(N)$, the smallest eigenvalue of $L&#39;L$ are just required to diverge in probability as $N \rightarrow \infty$.</description>
+    </item>
+    
+    <item>
+      <title>ER Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/er-method/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/er-method/</guid>
+      <description>1. Introduction The ER estimator is defined as
+$$ \hat{r}_{\mathrm{ER}}=\operatorname{argmin}_{0 \leq r \leq r_{max}} \lambda_{r}/\lambda_{r+1},$$ with $\lambda_{0} = \sum_{r=1}^{\min(N,T)}\lambda_{r}/ \log \min(N,T)$.
+The intuition for this method to work is very simple: based on strong factor assumption, for any $j \neq r_{0}$ the ratio $\lambda_{j}/ \lambda_{j+1}$ converges to $O(1)$ as $N, T \rightarrow \infty$, while the the ratio $\lambda_{r_{0}}/\lambda_{r_{0}+1}$ diverges to infinity. For the details of this method, please refer Ahn and Horenstein, 2013.</description>
+    </item>
+    
+    <item>
+      <title>IC Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/ic-method/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/ic-method/</guid>
+      <description>1. Introduction Let $\hat{L}_{r}^{\mathrm{pc}} \in \mathbb{R}^{N \times r}$ and $\hat{F}_{r}^{\mathrm{pc}} \in \mathbb{R}^{r \times T}$ be the PCA estimators for loadings and factors in the factor model. Define
+\begin{equation}V(r)=\frac{1}{N T}\left\|Y-\hat{L}_{r}^{\mathrm{pc}} \hat{F}_{r}^{\mathrm{pc}}\right\|_{F}^{2},\end{equation}
+and the following loss function:
+\begin{equation} \label{eq:3.3}\mathrm{IC}(r) = V(r) + rg(N,T) \quad \text{or} \quad \log (V(r)) + rg(N,T).\end{equation}
+The penalty function $g(N,T)$ satisfies two condition:
+ $g(N, T) \rightarrow 0$, $C_{NT}^2 g(N,T)$ $\rightarrow \infty$,  as $N, T \rightarrow \infty$, where $C_{NT} = \min {\sqrt{N}, \sqrt{T}}$.</description>
+    </item>
+    
+  </channel>
+</rss>

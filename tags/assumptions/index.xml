@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>assumptions on Third year project</title>
+    <link>https://zgong103.github.io/username.github.io/tags/assumptions/</link>
+    <description>Recent content in assumptions on Third year project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zgong103.github.io/username.github.io/tags/assumptions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Strong and weak factor assumptions</title>
+      <link>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</guid>
+      <description>Strong and weak factor assumptions In this section, we briefly go over the strong and weak factor assumptions. Assuming factors $F_{t}$ and noise $e_{t}$ are uncorrelated and have zero mean, and normalization $\mathbb{E}(F_{t}F_{t}^{&#39;}) = I_{r}$ for identification, then the population covariance matrix of the factor model (1) can be expressed as \begin{equation} \Sigma_{Y} = LL^{&#39;} + \Sigma_{e}, \quad \quad \quad (2) \end{equation} where $\Sigma_{Y}$ and $\Sigma_{e}$ are the $N \times N$ population covariance matrix of $Y_{t}$ and $e_{t}$, respectively.</description>
+    </item>
+    
+  </channel>
+</rss>

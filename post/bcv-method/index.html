@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BCV Method</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://zgong103.github.io/username.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.0" />
+        
+
+        
+
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
+
+        
+
+    </head>
+
+    <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">BCV Method</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/username.github.io/">Home</a></li>
+                            
+                                <li><a href="/username.github.io/about/">About</a></li>
+                            
+                                <li><a href="/username.github.io/post/">Posts</a></li>
+                            
+                                <li><a href="/username.github.io/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/username/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>BCV Method</h2>
+        <h5>December 30, 2019</h5>
+        
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><h2 id="1-introduction">1. Introduction</h2>
+<p>Instead of estimating the number of detectable factors, one may prefer estimating the number of useful factors (including strong and useful weak factors). The number of useful factors recover an underlying signal matrix $X = LF$ in the factor model more precisely than using the true number of factors or detectable factors. The BCV method is designed to estimate the number of useful factors in heteroscedastic noise for high dimensional data based on bi-cross-validation, using randomly held-out submatrices of the data matrix.</p>
+<p>The algorithm for recovering the signal matrix $X$ has two steps. First, they devise early stopping alternation (ESA) method to estimate $X$ given the number of factors $r^{* }$. Second, they propose bi-cross-validation (BCV) method to estimate the number of factors $r^{* }$ based on the ESA method. The idea of BCV method is that, for each candidate $r$,  we first use the three held-in blocks to estimate the held-out block $X_{00}$ (corresponding to $Y_{00}$ in the factor model) and then select the optimal $r^*$ by minimizing the BCV estimated prediction error. For the details of this method, please refer <a href="https://arxiv.org/abs/1503.03515">Owen and Wang, 2015</a>.</p>
+<h2 id="2-r-codes">2. R codes</h2>
+<p>Based on the algorithm above, we can write the R code for the BCV method as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">EsaBcv <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function </span>(Y, X <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>, r.limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, niter <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, nRepeat <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>,
+                    only.r <span style="color:#f92672">=</span> F, svd.method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">fast&#34;</span>, center <span style="color:#f92672">=</span> F){
+
+    Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.matrix</span>(Y);
+    p <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(Y);
+    n <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">nrow</span>(Y);
+    X.ori <span style="color:#f92672">&lt;-</span> X;
+
+    <span style="color:#75715e"># center is a logical term: whether to add an intercept term in the model.</span>
+    <span style="color:#a6e22e">if </span>(center)         
+    X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cbind</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span>, n), X);
+    qr.X <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+    Y.ori <span style="color:#f92672">&lt;-</span> Y;
+
+    <span style="color:#a6e22e">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.null</span>(X)) {
+		X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.matrix</span>(X);
+		k <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(X);
+		<span style="color:#a6e22e">if </span>(k <span style="color:#f92672">&gt;=</span> n)
+			<span style="color:#a6e22e">stop</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Too many predictors!! The number of predictors
+</span><span style="color:#e6db74">			     is expected to be much less than the sample size!&#34;</span>)
+		qr.X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr</span>(X);
+		Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr.qty</span>(qr.X, Y)[<span style="color:#f92672">-</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>k), ];
+		n <span style="color:#f92672">&lt;-</span> n<span style="color:#f92672">-</span>k;
+    }
+
+    <span style="color:#75715e">## decide the held-in size</span>
+    gamma <span style="color:#f92672">&lt;-</span> p<span style="color:#f92672">/</span>n;
+    bar.gamma <span style="color:#f92672">&lt;-</span> ((<span style="color:#a6e22e">sqrt</span>(gamma) <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>gamma))<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)^2;
+    sqrt.rho <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span>(<span style="color:#a6e22e">sqrt</span>(bar.gamma) <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(bar.gamma <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>));
+    held.in.size.small <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">round</span>(sqrt.rho<span style="color:#f92672">*</span><span style="color:#a6e22e">sqrt</span>(p <span style="color:#f92672">*</span> n)), p <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+    held.in.size.large <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">round</span>(sqrt.rho^2 <span style="color:#f92672">*</span> p <span style="color:#f92672">*</span> n<span style="color:#f92672">/</span>held.in.size.small);
+    <span style="color:#a6e22e">if </span>(n <span style="color:#f92672">&lt;</span> p) {
+        n1 <span style="color:#f92672">&lt;-</span> held.in.size.small;
+        p1 <span style="color:#f92672">&lt;-</span> held.in.size.large;
+    } else {
+        n1 <span style="color:#f92672">&lt;-</span> held.in.size.large;
+        p1 <span style="color:#f92672">&lt;-</span> held.in.size.small;
+    }
+    max.r <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">min</span>(n1, p1);
+    <span style="color:#a6e22e">if</span>(max.r <span style="color:#f92672">&gt;</span> r.limit)
+        max.r <span style="color:#f92672">&lt;-</span> r.limit;
+    <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">is.null</span>(nRepeat)) {
+       nRepeat <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">round</span>(p<span style="color:#f92672">/</span>p1), <span style="color:#a6e22e">round</span>(n<span style="color:#f92672">/</span>n1), <span style="color:#a6e22e">round</span>(p<span style="color:#f92672">/</span>(p<span style="color:#f92672">-</span>p1)),
+                      <span style="color:#a6e22e">round</span>(n<span style="color:#f92672">/</span>(n<span style="color:#f92672">-</span>n1)));
+    }
+
+    result.list <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+
+   <span style="color:#75715e"># Partition of the data matrix and choose r with the smallest prediction error</span>
+    <span style="color:#a6e22e">for </span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>nRepeat) {
+       	Y.resample <span style="color:#f92672">&lt;-</span> Y<span style="color:#a6e22e">[sample</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>n, n), <span style="color:#a6e22e">sample</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>p, p)];
+        result.list <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(result.list,<span style="color:#a6e22e">sapply</span>(<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span>max.r, <span style="color:#a6e22e">function</span>(r)
+          <span style="color:#a6e22e">BcvGivenRank</span>(Y.resample, r, niter,n1,p1,svd.method)));
+    }
+    not.na.result <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">which</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.na</span>(<span style="color:#a6e22e">colMeans</span>(result.list)));
+    max.r <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sum</span>(not.na.result <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(not.na.result)) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+    result.list <span style="color:#f92672">&lt;-</span> result.list[, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(max.r <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)];
+	  <span style="color:#a6e22e">colnames</span>(result.list) <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span>max.r;
+    best.r <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">which.min</span>(<span style="color:#a6e22e">colMeans</span>(result.list)) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+
+    <span style="color:#a6e22e">if </span>(only.r)
+    <span style="color:#a6e22e">return</span>(best.r)
+
+    est <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ESA</span>(Y.ori, best.r, X.ori, center, niter, svd.method);
+    result <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list</span>(best.r <span style="color:#f92672">=</span> best.r, estSigma <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>estSigma, estU <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>estU,     estD <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>estD, estV <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>estV, beta <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>beta,
+		estS <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>estS, mu <span style="color:#f92672">=</span> est<span style="color:#f92672">$</span>mu, max.r <span style="color:#f92672">=</span> max.r);
+	  <span style="color:#a6e22e">class</span>(result) <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">esabcv&#34;</span>
+    <span style="color:#a6e22e">return</span>(result);
+}</code></pre></div>
+<p>In the function above, we return a vector of BCV MSE from the four folds for a given rank:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">BcvGivenRank <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function </span>(Y, r, niter, n1, p1, svd.method) {
+    p <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(Y);
+    n <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">nrow</span>(Y);
+    hp <span style="color:#f92672">&lt;-</span> p <span style="color:#f92672">-</span> p1;
+    hn <span style="color:#f92672">&lt;-</span> n <span style="color:#f92672">-</span> n1;
+    bcv.result <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">BcvPerFoldGivenRank</span>(Y[1<span style="color:#f92672">:</span>hn, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>hp, drop <span style="color:#f92672">=</span> F],
+                                      Y[1<span style="color:#f92672">:</span>hn,<span style="color:#f92672">-</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>hp), drop <span style="color:#f92672">=</span> F],
+                                      Y[<span style="color:#f92672">-</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>hn),<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>hp, drop <span style="color:#f92672">=</span> F],
+                                      Y[<span style="color:#f92672">-</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>hn),<span style="color:#f92672">-</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>hp), drop <span style="color:#f92672">=</span> F], r, niter,                                       svd.method);
+    <span style="color:#a6e22e">return</span>(bcv.result);
+}</code></pre></div></p>
+<p>We calculate BCV MSE for one fold:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">## inputs:</span>
+<span style="color:#75715e"># Y00, Y01, Y10, Y11: the four folds of data and Y00 is the held-out fold</span>
+<span style="color:#75715e"># r: given number of factor to try</span>
+<span style="color:#75715e"># niter: number of iteration steps for ESA.</span>
+<span style="color:#75715e">## outputs:</span>
+<span style="color:#75715e"># the average entrywise estimation error of the held-out block.</span>
+<span style="color:#75715e"># if the estimate of Sigma is unreasonable, return NA</span>
+
+BcvPerFoldGivenRank <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(Y00, Y01, Y10, Y11, r, niter, svd.method,
+                                  tol.Sigma.scale <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>){
+    <span style="color:#a6e22e">if </span>(r <span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+        <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">mean</span>(Y00^2));
+    result <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">try</span>(<span style="color:#a6e22e">ESA</span>(Y11, r, niter <span style="color:#f92672">=</span> niter, svd.method <span style="color:#f92672">=</span> svd.method));
+    <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">class</span>(result)<span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">try-error&#34;</span>) {
+        <span style="color:#a6e22e">save</span>(Y11, r, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">problematic.RData&#34;</span>)
+        <span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Encounter problematic data!&#34;</span>)
+    }
+    Sigma1 <span style="color:#f92672">&lt;-</span> result<span style="color:#f92672">$</span>estSigma;
+
+    <span style="color:#a6e22e">if </span>((<span style="color:#a6e22e">mean</span>(<span style="color:#f92672">-</span><span style="color:#a6e22e">log10</span>(Sigma1)) <span style="color:#f92672">&gt;</span> tol.Sigma.scale <span style="color:#f92672">-</span> <span style="color:#a6e22e">log10</span>(<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">diag</span>(Sigma1)))) <span style="color:#f92672">|</span>
+        (<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">diag</span>(Sigma1)) <span style="color:#f92672">&lt;</span> .Machine<span style="color:#f92672">$</span>double.eps)) {
+        <span style="color:#a6e22e">return</span>(<span style="color:#66d9ef">NA</span>);
+    }
+
+    Y11.tilde <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">t</span>(<span style="color:#a6e22e">t</span>(Y11)<span style="color:#f92672">/</span> <span style="color:#a6e22e">sqrt</span>(Sigma1));
+    Y01.tilde <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">t</span>(<span style="color:#a6e22e">t</span>(Y01) <span style="color:#f92672">/</span> <span style="color:#a6e22e">sqrt</span>(Sigma1));
+    pseudo.inv.Y11.tilde <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">PseudoInv</span>(Y11.tilde, r, svd.method);
+    Y00.est <span style="color:#f92672">&lt;-</span> Y01.tilde <span style="color:#f92672">%*%</span> pseudo.inv.Y11.tilde <span style="color:#f92672">%*%</span> Y10;
+    held.out.res <span style="color:#f92672">&lt;-</span> Y00 <span style="color:#f92672">-</span> Y00.est;
+    est.error <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">mean</span>((held.out.res)^2);
+
+    <span style="color:#a6e22e">return </span>(est.error);
+}</code></pre></div>
+<p>We calculate the Moore-Penrose pseudo inverse of matrix Y up to a given
+rank, using moore-penrose pseudo inverse of a matrix as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Y the given matrix</span>
+<span style="color:#75715e"># k the given rank</span>
+<span style="color:#75715e"># A pseudo-inverse matrix of rank \code{k}</span>
+PseudoInv <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(Y, k, svd.method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">fast&#34;</span>) {
+      svd.trunc <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ComputeSVD</span>(Y, svd.method, k);
+      tol <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sqrt</span>(.Machine<span style="color:#f92672">$</span>double.eps);
+      pseudo.inv.d <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sapply</span>(svd.trunc<span style="color:#f92672">$</span>d, <span style="color:#a6e22e">function</span>(x)
+                             <span style="color:#a6e22e">ifelse</span>(x <span style="color:#f92672">&gt;</span> svd.trunc<span style="color:#f92672">$</span>d[1] <span style="color:#f92672">*</span> tol, x<span style="color:#a6e22e">^</span>(<span style="color:#ae81ff">-1</span>), <span style="color:#ae81ff">0</span>));
+      pseudo.inv.Y <span style="color:#f92672">&lt;-</span> svd.trunc<span style="color:#f92672">$</span>v<span style="color:#f92672">%*%</span><span style="color:#a6e22e">diag</span>(pseudo.inv.d[1<span style="color:#f92672">:</span>k],k,k)<span style="color:#f92672">%*%</span>
+                                                  <span style="color:#a6e22e">t</span>(svd.trunc<span style="color:#f92672">$</span>u);
+      <span style="color:#a6e22e">return</span>(pseudo.inv.Y)
+}</code></pre></div>
+<p>We estimate the latent factor matrix and noise variance using early stopping alternation (ESA) given the number of factors as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ESA <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(Y, r, X <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>, center <span style="color:#f92672">=</span> F, niter <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>, svd.method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">fast&#34;</span>){
+
+    Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.matrix</span>(Y);
+    p <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(Y);
+    n <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">nrow</span>(Y);
+    Y.ori <span style="color:#f92672">&lt;-</span> Y;
+    <span style="color:#a6e22e">if </span>(center)
+    	X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cbind</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span>, n), X);
+    qr.X <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+    <span style="color:#a6e22e">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.null</span>(X)) {
+		X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.matrix</span>(X);
+		k <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ncol</span>(X);
+		<span style="color:#a6e22e">if </span>(k <span style="color:#f92672">&gt;=</span> n)
+			<span style="color:#a6e22e">stop</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Too many predictors!! The number of predictors
+</span><span style="color:#e6db74">			     is expected to be much less than the sample size!&#34;</span>)
+		qr.X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr</span>(X);
+		beta <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr.coef</span>(qr.X, Y);
+		<span style="color:#a6e22e">if </span>(center) {
+			mu <span style="color:#f92672">&lt;-</span> beta[1, ];
+			<span style="color:#a6e22e">if </span>(k <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+				beta1 <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+			} else
+				beta1 <span style="color:#f92672">&lt;-</span> beta[<span style="color:#ae81ff">-1</span>, ];
+		} else {
+			mu <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+			beta1 <span style="color:#f92672">&lt;-</span> beta;
+		}
+		Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr.qty</span>(qr.X, Y)[<span style="color:#f92672">-</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>k), ];
+		n <span style="color:#f92672">&lt;-</span> n<span style="color:#f92672">-</span>k;
+    } else {
+        beta1 <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+        mu <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">NULL</span>;
+    }
+
+    <span style="color:#75715e"># initializing Sigma</span>
+    Sigma <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">apply</span>(Y, <span style="color:#ae81ff">2</span>, var);
+    <span style="color:#a6e22e">if </span>(r <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+        <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">list</span>(estSigma <span style="color:#f92672">=</span> Sigma, estU <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>, estD <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>,
+                    estV <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>, estS <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>, beta <span style="color:#f92672">=</span> beta1, mu <span style="color:#f92672">=</span> mu));
+    <span style="color:#a6e22e">if </span>(r <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">min</span>(p, n)) {
+        svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ComputeSVD</span>(Y, svd.method <span style="color:#f92672">=</span> svd.method);
+        <span style="color:#a6e22e">if </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.null</span>(X)) {
+        	estU <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr.qy</span>(qr.X, <span style="color:#a6e22e">rbind</span>(<span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">0</span>, k <span style="color:#f92672">*</span> r), nrow <span style="color:#f92672">=</span> k),
+        						      svd.Y<span style="color:#f92672">$</span>u))
+        } else
+        	estU <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>u
+        <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">list</span>(estSigma <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">0</span>,p), estU <span style="color:#f92672">=</span> estU,
+                    estD <span style="color:#f92672">=</span> svd.Y<span style="color:#f92672">$</span>d <span style="color:#f92672">/</span> <span style="color:#a6e22e">sqrt</span>(n),
+                    estV <span style="color:#f92672">=</span> svd.Y<span style="color:#f92672">$</span>v, estS <span style="color:#f92672">=</span> Y.ori, beta <span style="color:#f92672">=</span> beta1, mu <span style="color:#f92672">=</span> mu));   
+    }
+    iter <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#a6e22e">while </span>(<span style="color:#ae81ff">1</span>) {
+        iter <span style="color:#f92672">=</span> iter <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#a6e22e">if</span>( iter <span style="color:#f92672">&gt;</span> niter ){
+            break;
+        }
+        Y.tilde <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sapply</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>p, <span style="color:#a6e22e">function</span>(i)
+                            Y[, i] <span style="color:#f92672">/</span> <span style="color:#a6e22e">sqrt</span>(Sigma[i]));
+        svd.Ytilde <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ComputeSVD</span>(Y.tilde, rank <span style="color:#f92672">=</span> r);
+        U.tilde <span style="color:#f92672">&lt;-</span> svd.Ytilde<span style="color:#f92672">$</span>u;
+        V.tilde <span style="color:#f92672">&lt;-</span> svd.Ytilde<span style="color:#f92672">$</span>v;
+        estU <span style="color:#f92672">&lt;-</span> U.tilde;
+        estD <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">diag</span>(svd.Ytilde<span style="color:#f92672">$</span>d[1<span style="color:#f92672">:</span>r], r, r)
+        estV <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sqrt</span>(Sigma) <span style="color:#f92672">*</span> V.tilde;     
+        res <span style="color:#f92672">&lt;-</span> Y <span style="color:#f92672">-</span> estU <span style="color:#f92672">%*%</span> estD <span style="color:#f92672">%*%</span> <span style="color:#a6e22e">t</span>(estV);
+        Sigma <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">apply</span>(res, <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">function</span>(x) <span style="color:#a6e22e">sum</span>(x^2)<span style="color:#f92672">/</span><span style="color:#a6e22e">length</span>(x));
+    }
+    <span style="color:#a6e22e">if </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.null</span>(X))
+		estU <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rbind</span>(<span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">0</span>, k <span style="color:#f92672">*</span> r), nrow <span style="color:#f92672">=</span> k), estU);
+    estS <span style="color:#f92672">&lt;-</span> estU <span style="color:#f92672">%*%</span> estD <span style="color:#f92672">%*%</span> <span style="color:#a6e22e">t</span>(estV);
+    svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ComputeSVD</span>(estS, svd.method, r);
+	<span style="color:#a6e22e">if </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.null</span>(X)) {
+		estU <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr.qy</span>(qr.X, svd.Y<span style="color:#f92672">$</span>u);
+		estS <span style="color:#f92672">&lt;-</span> estS <span style="color:#f92672">+</span> X <span style="color:#f92672">%*%</span> beta;
+	} else
+		estU <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>u;
+    estD <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>d[1<span style="color:#f92672">:</span>r]<span style="color:#f92672">/</span><span style="color:#a6e22e">sqrt</span>(n);
+    <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">list</span>(estSigma <span style="color:#f92672">=</span> Sigma, estU <span style="color:#f92672">=</span> estU, estD <span style="color:#f92672">=</span> estD,
+                estV <span style="color:#f92672">=</span> svd.Y<span style="color:#f92672">$</span>v, estS <span style="color:#f92672">=</span> estS, beta <span style="color:#f92672">=</span> beta1, mu <span style="color:#f92672">=</span> mu));    
+}</code></pre></div>
+<p>A wrapper for computing SVD:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">ComputeSVD <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(Y, svd.method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">fast&#34;</span>, rank <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>, kmax.r <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>) {
+    <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">is.null</span>(rank)) {
+        rank <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">dim</span>(Y));
+    }
+	<span style="color:#a6e22e">if</span>(svd.method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">propack&#34;</span>) {
+		svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">try</span>(<span style="color:#a6e22e">suppressWarnings</span>(<span style="color:#a6e22e">propack.svd</span>(Y, neig <span style="color:#f92672">=</span> rank)));
+		<span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">class</span>(svd.Y) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">try-error&#34;</span> <span style="color:#f92672">&amp;</span> (rank <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">dim</span>(Y)))) {
+			svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">suppressWarnings</span>(<span style="color:#a6e22e">propack.svd</span>(Y, neig <span style="color:#f92672">=</span> rank <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>));
+			<span style="color:#a6e22e">if </span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">length</span>(svd.Y<span style="color:#f92672">$</span>d) <span style="color:#f92672">==</span> (rank <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) {
+				svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">propack.svd</span>(Y, neig <span style="color:#f92672">=</span> rank <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>,
+									 opts <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(kmax <span style="color:#f92672">=</span> kmax.r <span style="color:#f92672">*</span> (rank <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)));
+			}
+			svd.Y<span style="color:#f92672">$</span>u <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>u[, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>rank];
+			svd.Y<span style="color:#f92672">$</span>v <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>v[, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>rank];
+			svd.Y<span style="color:#f92672">$</span>d <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>d[1<span style="color:#f92672">:</span>rank];
+		} else <span style="color:#a6e22e">if </span>((<span style="color:#a6e22e">class</span>(svd.Y) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">try-error&#34;</span>) <span style="color:#f92672">|</span> (<span style="color:#a6e22e">length</span>(svd.Y<span style="color:#f92672">$</span>d) <span style="color:#f92672">!=</span> rank)) {
+			<span style="color:#a6e22e">warning</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">PROPACK fails, used fast.svd to compute SVD instead!!&#34;</span>);
+			svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">ComputeSVD</span>(Y, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">fast&#34;</span>, rank);
+		}
+	} else <span style="color:#a6e22e">if </span>(svd.method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">fast&#34;</span>) {
+        tol <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">dim</span>(Y)) <span style="color:#f92672">*</span> .Machine<span style="color:#f92672">$</span>double.eps;
+
+        svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fast.svd</span>(Y, tol);
+
+        <span style="color:#a6e22e">if </span>(rank <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">dim</span>(Y))) {
+            svd.Y<span style="color:#f92672">$</span>u <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(svd.Y<span style="color:#f92672">$</span>u[, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>rank], ncol <span style="color:#f92672">=</span> rank);
+            svd.Y<span style="color:#f92672">$</span>v <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(svd.Y<span style="color:#f92672">$</span>v[, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>rank], ncol <span style="color:#f92672">=</span> rank);
+            svd.Y<span style="color:#f92672">$</span>d <span style="color:#f92672">&lt;-</span> svd.Y<span style="color:#f92672">$</span>d[1<span style="color:#f92672">:</span>rank];
+        }
+    } else    {
+        svd.Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">svd</span>(Y, nu <span style="color:#f92672">=</span> rank, nv <span style="color:#f92672">=</span> rank);
+    }
+    <span style="color:#a6e22e">return</span>(svd.Y)
+}</code></pre></div>
+<p>The package we need to <code>library()</code> before applying the BCV method is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(corpcor)</code></pre></div>
+<h2 id="3-strong-factor-estimation-and-robustness-check">3. Strong factor estimation and robustness check</h2>
+<p>Simulation design: we use the following DGP <!-- raw HTML omitted --> for generating strong factors:</p>
+<p>\begin{equation}
+Y_{it} = \sum_{j=1}^{r}\lambda_{ij} F_{tj}  + e_{it}, \quad \text{where}\<br>
+\lambda_{ij}, F_{tj} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1),\<br>
+\end{equation}
+$$\text{with} \quad e_{i t} = \rho_{1} e_{i t-1} + (1-\rho_{1}^2)^{1/2} \xi_{it},$$
+$$\text{and} \quad \xi_{i t} = \rho_{2} \xi_{i-1, t} + (1-\rho_{2}^2)^{1/2} \epsilon_{it}, \quad \epsilon_{it} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1).$$</p>
+<p>We let $r=5$,  and consider the three cases for $e_{it}$ below:</p>
+<ul>
+<li>
+<p><strong>Case I:</strong>   high serial correlation only, $\rho_{1} = 0.9$ and $\rho_{2} = 0$;</p>
+</li>
+<li>
+<p><strong>Case II:</strong>  high cross-sectional correlation only, $\rho_{1} = 0$ and $\rho_{2} = 0.8$;</p>
+</li>
+<li>
+<p><strong>Case III:</strong> non-guassion distributions only, $\rho_{1} = \rho_{2} = 0$. For example, we can chosse gamma distribution for $e_{it}$ with mean zero and variance 0.5.</p>
+</li>
+</ul>
+<p>The corresponding R code of applying the BCV method for this DGP is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">S <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">10</span>                   <span style="color:#75715e"># Number of Simulation</span>
+N_set <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>)
+T_set <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>)
+NT_comb <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">expand.grid</span>(N_set, T_set)  <span style="color:#75715e"># Combination of N and T pairs</span>
+
+r_hat_BCV <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, S, <span style="color:#ae81ff">4</span>)
+Factor_BCV <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>,<span style="color:#a6e22e">nrow</span>(NT_comb),<span style="color:#ae81ff">6</span>)
+<span style="color:#a6e22e">colnames</span>(Factor_BCV) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">N&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">white&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">serial&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">cross&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">gamma&#34;</span>)
+
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(NT_comb)){
+  <span style="color:#a6e22e">for</span>(s in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>S){
+
+    <span style="color:#75715e"># Data generating process</span>
+    N <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">1</span>]
+    T <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">2</span>]
+
+    F_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(T<span style="color:#f92672">*</span>r), T, r)  <span style="color:#75715e"># generating factor matrix</span>
+    L_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N<span style="color:#f92672">*</span>r), N, r)  <span style="color:#75715e"># generating loading matrix</span>
+
+    <span style="color:#75715e"># DGP for generating strong factors in white noise</span>
+    e_0 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N<span style="color:#f92672">*</span>T), N, T)  
+    X <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_0   
+
+    <span style="color:#75715e"># DGP for generating strong factors in high serially correlated noise</span>
+    rho1 <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.8</span>
+    e_1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, N, T)
+    e_1[, <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">for </span>(t in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(T<span style="color:#ae81ff">-1</span>)) {
+      e_1[, t<span style="color:#ae81ff">+1</span>] <span style="color:#f92672">&lt;-</span> e_1[, t]<span style="color:#f92672">*</span>rho1 <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> rho1^2)<span style="color:#f92672">*</span><span style="color:#a6e22e">rnorm</span>(N, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    }
+    X1 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_1
+
+    <span style="color:#75715e"># DGP for generating strong factors in high cross-sectionally</span>
+    <span style="color:#75715e"># correlated noise</span>
+    rho2 <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0.8</span>
+    e_2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, N, T)
+    e_2[1,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(T, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    <span style="color:#a6e22e">for </span>(n in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>(N<span style="color:#ae81ff">-1</span>)) {
+      e_2[n<span style="color:#ae81ff">+1</span> , ] <span style="color:#f92672">&lt;-</span> e_2[n, ]<span style="color:#f92672">*</span>rho2 <span style="color:#f92672">+</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> rho2^2)<span style="color:#f92672">*</span><span style="color:#a6e22e">rnorm</span>(T, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+    }
+    X2 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_2
+
+    <span style="color:#75715e"># DGP for generating strong factors in noise with gamma distribution</span>
+    e_3 <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rgamma</span>(N <span style="color:#f92672">*</span> T, <span style="color:#ae81ff">0.25</span>, scale <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>), nrow <span style="color:#f92672">=</span> N)
+    X3 <span style="color:#f92672">&lt;-</span> L_0<span style="color:#f92672">%*%</span><span style="color:#a6e22e">t</span>(F_0) <span style="color:#f92672">+</span> e_3
+
+    <span style="color:#75715e"># Apply the NE method to estimate the number of strong factors</span>
+    <span style="color:#75715e"># in the DGP</span>
+    r_hat_BCV[s,<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EsaBcv</span>(X, only.r <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+    r_hat_BCV[s,<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EsaBcv</span>(X1, only.r <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+    r_hat_BCV[s,<span style="color:#ae81ff">3</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EsaBcv</span>(X2, only.r <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+    r_hat_BCV[s,<span style="color:#ae81ff">4</span>] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EsaBcv</span>(X3, only.r <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+
+  }
+    Factor_BCV[i,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(N,T,<span style="color:#a6e22e">colMeans</span>(r_hat_BCV))
+}</code></pre></div>
+<p>The results of the BCV method for estimating the number of strong factors with different types of error terms are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">       N   T white serial cross gamma
+[1,]  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">50</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">10.0</span>  <span style="color:#ae81ff">10.6</span>   <span style="color:#ae81ff">4.9</span>
+[2,] <span style="color:#ae81ff">100</span>  <span style="color:#ae81ff">50</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">14.3</span>  <span style="color:#ae81ff">11.1</span>   <span style="color:#ae81ff">6.5</span>
+[3,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">11.4</span>  <span style="color:#ae81ff">13.5</span>   <span style="color:#ae81ff">6.3</span>
+[4,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">100</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">17.9</span>  <span style="color:#ae81ff">16.6</span>   <span style="color:#ae81ff">6.0</span>
+[5,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span>     <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">8.7</span>  <span style="color:#ae81ff">15.5</span>   <span style="color:#ae81ff">6.1</span>
+[6,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">200</span>     <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">19.1</span>  <span style="color:#ae81ff">19.8</span>   <span style="color:#ae81ff">6.1</span></code></pre></div>
+<p>From the results above, we can see that the BCV method is not robust when the error terms in the factor model are high serially and cross-sectionally correlated, or have non-gaussian distribution.</p>
+<h2 id="4-weak-factor-estimation">4. Weak factor estimation</h2>
+<p>The BCV method is designed to estimate the number of strong and useful weak factors with heteroscedastic noise in high dimensional data. To show this, we can apply the BCV method to <!-- raw HTML omitted --> the DGP<!-- raw HTML omitted --> that we used to generate weak factors before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">r_hat_BCV <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>, S, <span style="color:#ae81ff">1</span>)
+Factor_BCV_weak <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#66d9ef">NA</span>,<span style="color:#a6e22e">nrow</span>(NT_comb),<span style="color:#ae81ff">3</span>)
+<span style="color:#a6e22e">colnames</span>(Factor_BCV_weak) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">n&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">T&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">r_hat_BCV&#34;</span>)
+
+<span style="color:#a6e22e">for</span>(i in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(NT_comb)){
+  <span style="color:#a6e22e">for</span>(s in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>S){
+
+<span style="color:#75715e"># Data generating process</span>
+    N <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">1</span>]
+    T <span style="color:#f92672">&lt;-</span> NT_comb[i,<span style="color:#ae81ff">2</span>]
+    X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">DGP_weak</span>(N,T,<span style="color:#ae81ff">5</span>)<span style="color:#f92672">$</span>Y
+
+<span style="color:#75715e"># Apply the NE method to estimate the number of strong factors in the DGP:    </span>
+    r_hat_BCV[s,] <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">EsaBcv</span>(X, only.r <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>)
+  }
+    Factor_BCV_weak[i,] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(N,T,<span style="color:#a6e22e">mean</span>(r_hat_BCV))
+}</code></pre></div>
+<p>The goal is to estimation the number of strong and useful weak factors in the DGP. The results of the NE method to estimate the number of weak factors in the DGP are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">       N   T r_hat_BCV
+[1,]  <span style="color:#ae81ff">50</span>  <span style="color:#ae81ff">50</span>       <span style="color:#ae81ff">2.1</span>
+[2,] <span style="color:#ae81ff">100</span>  <span style="color:#ae81ff">50</span>       <span style="color:#ae81ff">2.8</span>
+[3,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">100</span>       <span style="color:#ae81ff">2.6</span>
+[4,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">100</span>       <span style="color:#ae81ff">3.0</span>
+[5,]  <span style="color:#ae81ff">50</span> <span style="color:#ae81ff">200</span>       <span style="color:#ae81ff">2.8</span>
+[6,] <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">200</span>       <span style="color:#ae81ff">3.0</span></code></pre></div>
+<p>From the results above, we can see that the BCV method can estimate the number of strong and useful factors in the DGP very well in finite samples.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/ne-method/">NE Method</a></h4>
+    <h5>December 30, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/ic-method/">IC Method</a></h4>
+    <h5>December 29, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/er-method/">ER Method</a></h4>
+    <h5>December 29, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+        <h4 class="page-header">Comments</h4>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "username" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
+        </footer>
+
+        
+
+    </body>
+
+</html>
+

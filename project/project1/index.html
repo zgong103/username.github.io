@@ -71,15 +71,34 @@
 
         
 
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
 
         
 
     </head>
 
     <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
         
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -130,28 +149,29 @@
 
     <div>
         <h2>Project 1</h2>
-        <h5>Lorem ipsum dolor sit amet</h5>
+        <h5>Non-robustness issue for factor estimation</h5>
         
-<a href="https://zgong103.github.io/username.github.io/tags/go"><kbd class="item-tag">go</kbd></a>
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
 
-<a href="https://zgong103.github.io/username.github.io/tags/golang"><kbd class="item-tag">golang</kbd></a>
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
 
-<a href="https://zgong103.github.io/username.github.io/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
 
 
     </div>
 
-    <div align="start" class="content"></div>
+    <div align="start" class="content"><p><a href="../Third_year_paper__second_draft.pdf">My third year paper</a>.</p>
+</div>
 
 </main>
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
         </footer>
 
         
 
-        
     </body>
 
 </html>

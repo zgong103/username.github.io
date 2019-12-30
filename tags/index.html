@@ -74,15 +74,34 @@
 
         
 
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
 
         
 
     </head>
 
     <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
         
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -142,8 +161,8 @@
     
     
 
-    <h4><a href="/username.github.io/tags/introduction/">introduction</a></h4>
-    <h5>September 28, 2014</h5>
+    <h4><a href="/username.github.io/tags/methods/">methods</a></h4>
+    <h5>December 30, 2019</h5>
     
 
 
@@ -157,8 +176,8 @@
     
     
 
-    <h4><a href="/username.github.io/tags/development/">development</a></h4>
-    <h5>April 2, 2014</h5>
+    <h4><a href="/username.github.io/tags/weak/">weak</a></h4>
+    <h5>December 30, 2019</h5>
     
 
 
@@ -172,8 +191,8 @@
     
     
 
-    <h4><a href="/username.github.io/tags/go/">go</a></h4>
-    <h5>April 2, 2014</h5>
+    <h4><a href="/username.github.io/tags/strong/">strong</a></h4>
+    <h5>December 29, 2019</h5>
     
 
 
@@ -187,8 +206,8 @@
     
     
 
-    <h4><a href="/username.github.io/tags/golang/">golang</a></h4>
-    <h5>April 2, 2014</h5>
+    <h4><a href="/username.github.io/tags/dgp/">DGP</a></h4>
+    <h5>December 28, 2019</h5>
     
 
 
@@ -202,8 +221,8 @@
     
     
 
-    <h4><a href="/username.github.io/tags/hugo/">hugo</a></h4>
-    <h5>April 2, 2014</h5>
+    <h4><a href="/username.github.io/tags/assumptions/">assumptions</a></h4>
+    <h5>December 27, 2019</h5>
     
 
 
@@ -230,11 +249,11 @@
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
         </footer>
 
         
 
-        
     </body>
 
 </html>

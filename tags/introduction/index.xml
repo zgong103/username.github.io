@@ -6,18 +6,36 @@
     <description>Recent content in introduction on Third year project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://zgong103.github.io/username.github.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Strong and weak factor assumptions</title>
+      <link>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</guid>
+      <description>Strong and weak factor assumptions In this section, we briefly go over the strong and weak factor assumptions. Assuming factors $F_{t}$ and noise $e_{t}$ are uncorrelated and have zero mean, and normalization $\mathbb{E}(F_{t}F_{t}^{&#39;}) = I_{r}$ for identification, then the population covariance matrix of the factor model (1) can be expressed as \begin{equation} \Sigma_{Y} = LL^{&#39;} + \Sigma_{e}, \quad \quad \quad (2) \end{equation} where $\Sigma_{Y}$ and $\Sigma_{e}$ are the $N \times N$ population covariance matrix of $Y_{t}$ and $e_{t}$, respectively.</description>
+    </item>
+    
+    <item>
+      <title>Basic Factor Model</title>
+      <link>https://zgong103.github.io/username.github.io/post/basic-factor-model/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/basic-factor-model/</guid>
+      <description>Basic factor model Factor analysis based on a model that separates the observed data into an unobserved systematic part (signal part) and an unobserved error part (noise part). The systematic part captures the main information of the data so that we want to separate it from noise part. Specifically, let $Y_{it}$ be the observed data for the $i$-th cross-section unit at time $t$, for $i=1,2,\cdots, N$ and $t=1,\cdots,T$. The factor model for $Y_{it}$ is given by \begin{equation} Y_{it} = L_{i}^{&#39;} F_{t} + e_{it},</description>
+    </item>
+    
+    <item>
       <title>A Simple Introduction</title>
       <link>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</guid>
-      <description>Introduction In this page, we first provides a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:
+      <description>Introduction In the following posts, we provide a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:
   Methods for estmating the number of strong factors:
  IC Method: information criteria based methods (Bai and Ng, 2002).</description>
     </item>

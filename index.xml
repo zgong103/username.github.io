@@ -6,7 +6,7 @@
     <description>Recent content on Third year project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://zgong103.github.io/username.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,80 +17,103 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://zgong103.github.io/username.github.io/project/project1/</guid>
-      <description></description>
+      <description>My third year paper.</description>
     </item>
     
     <item>
-      <title>Project 2</title>
-      <link>https://zgong103.github.io/username.github.io/project/project2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>BCV Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/bcv-method/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zgong103.github.io/username.github.io/project/project2/</guid>
-      <description></description>
+      <guid>https://zgong103.github.io/username.github.io/post/bcv-method/</guid>
+      <description>1. Introduction Instead of estimating the number of detectable factors, one may prefer estimating the number of useful factors (including strong and useful weak factors). The number of useful factors recover an underlying signal matrix $X = LF$ in the factor model more precisely than using the true number of factors or detectable factors. The BCV method is designed to estimate the number of useful factors in heteroscedastic noise for high dimensional data based on bi-cross-validation, using randomly held-out submatrices of the data matrix.</description>
     </item>
     
     <item>
-      <title>Project 3</title>
-      <link>https://zgong103.github.io/username.github.io/project/project3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>NE Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/ne-method/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zgong103.github.io/username.github.io/project/project3/</guid>
-      <description></description>
+      <guid>https://zgong103.github.io/username.github.io/post/ne-method/</guid>
+      <description>1. Introduction Instead of assuming $L^{&#39;}L/N \rightarrow \Sigma_{L}$ for strong factors, it is assumed that $L^{&#39;}L \rightarrow \Sigma_{L}$ as $N, T \rightarrow \infty$ for weak factors. The results from random matrix theory (RMT) show that, even for white noise case $\Sigma_{e} = \sigma^{2}I_{N}$, PCA estimators of the loadings and factors are inconsistent as $N, T \rightarrow \infty$.
+Specifically, there exists a phase transition phenomenon in the limit: if the $k$-th largest eigenvalue of population covariance matrix ${\Sigma}_{Y}$ less than the threshold $(\sqrt{N/T}+1) \sigma^{2}$, it has little chance to detect of the $k$-th factor using PCA or MLE as $T, N \rightarrow \infty$.</description>
     </item>
     
     <item>
-      <title>Project 4</title>
-      <link>https://zgong103.github.io/username.github.io/project/project4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>ED Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/ed-method/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zgong103.github.io/username.github.io/project/project4/</guid>
-      <description></description>
+      <guid>https://zgong103.github.io/username.github.io/post/ed-method/</guid>
+      <description>1. Introduction The ED estimator is defined as
+$$\hat{r}_{\mathrm{ED}} = \max \left\{r \leq r_{max}: \lambda_{r} - \lambda_{r+1} \geq \delta\right\},$$
+where $\delta$ is some fixed number, $\lambda_{i}$ is the $i$-th largest eigenvalue of $\hat{\Sigma}_{Y}$. This method estimates the number of factors by exploiting the structure of idiosyncratic terms using the results from RMT. It explicitly allows serial and cross-sectional correlation in the error terms in the assumption.
+An advantage of this method comparing with the IC method is that the consistency of the ED estimator can allow for much weaker strength of the factors: instead of growing in the order of $O(N)$, the smallest eigenvalue of $L&#39;L$ are just required to diverge in probability as $N \rightarrow \infty$.</description>
+    </item>
+    
+    <item>
+      <title>ER Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/er-method/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/er-method/</guid>
+      <description>1. Introduction The ER estimator is defined as
+$$ \hat{r}_{\mathrm{ER}}=\operatorname{argmin}_{0 \leq r \leq r_{max}} \lambda_{r}/\lambda_{r+1},$$ with $\lambda_{0} = \sum_{r=1}^{\min(N,T)}\lambda_{r}/ \log \min(N,T)$.
+The intuition for this method to work is very simple: based on strong factor assumption, for any $j \neq r_{0}$ the ratio $\lambda_{j}/ \lambda_{j+1}$ converges to $O(1)$ as $N, T \rightarrow \infty$, while the the ratio $\lambda_{r_{0}}/\lambda_{r_{0}+1}$ diverges to infinity. For the details of this method, please refer Ahn and Horenstein, 2013.</description>
+    </item>
+    
+    <item>
+      <title>IC Method</title>
+      <link>https://zgong103.github.io/username.github.io/post/ic-method/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/ic-method/</guid>
+      <description>1. Introduction Let $\hat{L}_{r}^{\mathrm{pc}} \in \mathbb{R}^{N \times r}$ and $\hat{F}_{r}^{\mathrm{pc}} \in \mathbb{R}^{r \times T}$ be the PCA estimators for loadings and factors in the factor model. Define
+\begin{equation}V(r)=\frac{1}{N T}\left\|Y-\hat{L}_{r}^{\mathrm{pc}} \hat{F}_{r}^{\mathrm{pc}}\right\|_{F}^{2},\end{equation}
+and the following loss function:
+\begin{equation} \label{eq:3.3}\mathrm{IC}(r) = V(r) + rg(N,T) \quad \text{or} \quad \log (V(r)) + rg(N,T).\end{equation}
+The penalty function $g(N,T)$ satisfies two condition:
+ $g(N, T) \rightarrow 0$, $C_{NT}^2 g(N,T)$ $\rightarrow \infty$,  as $N, T \rightarrow \infty$, where $C_{NT} = \min {\sqrt{N}, \sqrt{T}}$.</description>
+    </item>
+    
+    <item>
+      <title>Generate weak factors</title>
+      <link>https://zgong103.github.io/username.github.io/post/generate-weak-factors/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/generate-weak-factors/</guid>
+      <description>Before introducing the methods to estimate the number of strong and weak factors for high dimensional data, let me first introduce how to genernate the weak factors in the DGP and corresponding R codes. Consider the factor model as:
+$$ Y = X + \Sigma^{\frac{1}{2}}E = \Sigma^{\frac{1}{2}} (\sqrt{T} \hat{U} \hat{D} \hat{V}&amp;rsquo; + E), $$
+where $\sqrt{T} \hat{U} \hat{D} \hat{V}^{&#39;}$ is the singular value decomposition (SVD) for $\Sigma^{-\frac{1}{2}}X$ with $\hat{U} \in \mathbb{R}^{N\times \min (N,T)}$, $\hat{V} \in \mathbb{R}^{T \times \min (N,T)}$, $\hat{D}= \text{diag} (\hat{d}_{1}, \hat{d}_{2}, \cdots, \hat{d}_{\min (N, T)})$, $\hat{U}&#39; \hat{U} = \hat{V}&#39; \hat{V} = I_{\min (N, T)}$, and $\hat{d}_{1} \geq \hat{d}_{2} \geq , \cdots, \geq \hat{d}_{\min (N, T)}$.</description>
+    </item>
+    
+    <item>
+      <title>Strong and weak factor assumptions</title>
+      <link>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</guid>
+      <description>Strong and weak factor assumptions In this section, we briefly go over the strong and weak factor assumptions. Assuming factors $F_{t}$ and noise $e_{t}$ are uncorrelated and have zero mean, and normalization $\mathbb{E}(F_{t}F_{t}^{&#39;}) = I_{r}$ for identification, then the population covariance matrix of the factor model (1) can be expressed as \begin{equation} \Sigma_{Y} = LL^{&#39;} + \Sigma_{e}, \quad \quad \quad (2) \end{equation} where $\Sigma_{Y}$ and $\Sigma_{e}$ are the $N \times N$ population covariance matrix of $Y_{t}$ and $e_{t}$, respectively.</description>
+    </item>
+    
+    <item>
+      <title>Basic Factor Model</title>
+      <link>https://zgong103.github.io/username.github.io/post/basic-factor-model/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/basic-factor-model/</guid>
+      <description>Basic factor model Factor analysis based on a model that separates the observed data into an unobserved systematic part (signal part) and an unobserved error part (noise part). The systematic part captures the main information of the data so that we want to separate it from noise part. Specifically, let $Y_{it}$ be the observed data for the $i$-th cross-section unit at time $t$, for $i=1,2,\cdots, N$ and $t=1,\cdots,T$. The factor model for $Y_{it}$ is given by \begin{equation} Y_{it} = L_{i}^{&#39;} F_{t} + e_{it},</description>
     </item>
     
     <item>
       <title>A Simple Introduction</title>
       <link>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</guid>
-      <description>Introduction In this page, we first provides a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:
+      <description>Introduction In the following posts, we provide a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:
   Methods for estmating the number of strong factors:
  IC Method: information criteria based methods (Bai and Ng, 2002).</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://zgong103.github.io/username.github.io/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://zgong103.github.io/username.github.io/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate from Jekyll</title>
-      <link>https://zgong103.github.io/username.github.io/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/▾ images/logo.png should become
-▾ &amp;lt;root&amp;gt;/▾ static/▾ images/logo.png Additionally, you&#39;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
     <item>

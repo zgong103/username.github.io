@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>factor model on Third year project</title>
+    <link>https://zgong103.github.io/username.github.io/tags/factor-model/</link>
+    <description>Recent content in factor model on Third year project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zgong103.github.io/username.github.io/tags/factor-model/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Basic Factor Model</title>
+      <link>https://zgong103.github.io/username.github.io/post/basic-factor-model/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/post/basic-factor-model/</guid>
+      <description>Basic factor model Factor analysis based on a model that separates the observed data into an unobserved systematic part (signal part) and an unobserved error part (noise part). The systematic part captures the main information of the data so that we want to separate it from noise part. Specifically, let $Y_{it}$ be the observed data for the $i$-th cross-section unit at time $t$, for $i=1,2,\cdots, N$ and $t=1,\cdots,T$. The factor model for $Y_{it}$ is given by \begin{equation} Y_{it} = L_{i}^{&#39;} F_{t} + e_{it},</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Third year project</title>
+        <title>Basic Factor Model</title>
         
         <style>
 
@@ -68,9 +68,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.62.0" />
         
-            <link href="/username.github.io/index.xml" rel="alternate" type="application/rss&#43;xml" title="Third year project" />
-            <link href="/username.github.io/index.xml" rel="feed" type="application/rss&#43;xml" title="Third year project" />
-        
 
         
 
@@ -107,7 +104,7 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">Third year project</a>
+                    <a class="navbar-brand visible-xs" href="#">Basic Factor Model</a>
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -149,12 +146,95 @@
 
 
 <main>
-    <div class="intro">
+
+    <div>
+        <h2>Basic Factor Model</h2>
+        <h5>December 26, 2019</h5>
         
-        <h1>Third year project</h1>
-        <h2>R codes used in the my third year paper and corresonding explainations.</h2>
-        
+<a href="https://zgong103.github.io/username.github.io/tags/introduction"><kbd class="item-tag">introduction</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/factor-model"><kbd class="item-tag">factor model</kbd></a>
+
+
     </div>
+
+    <div align="start" class="content"><h2 id="basic-factor-model">Basic factor model</h2>
+<p>Factor analysis based on a model that separates the observed data into an unobserved systematic part (signal part) and an unobserved error part (noise part). The systematic part captures the main information of the data so that we want to separate it from noise part. Specifically, let $Y_{it}$ be the observed data for the $i$-th cross-section unit at time $t$, for $i=1,2,\cdots, N$ and $t=1,\cdots,T$. The factor model for $Y_{it}$ is given by
+\begin{equation}
+Y_{it} =  L_{i}^{'} F_{t} + e_{it},<br>
+; i = 1,\dots,N, t = 1,\dots, T, \quad \quad \quad (1)
+\end{equation}
+where $F_{t}$ is a $(r_{0} \times 1)$ vector of common factors, $L_{i}$ is a $(r_{0} \times 1)$ vector of loadings associated with $F_{t}$, and $e_{it}$ is the idiosyncratic component (noise part) of $Y_{it}$. The number of true factors in the model is $r_{0}$. The product of $L_{i}^{'}F_{t}$ is called the common component (signal part) of $Y_{it}$. The factors, their loadings, as well as the idiosyncratic errors are not observable. The goal is to estimate the number of factors $r_{0}$ in the observed data under strong and weak factor assumptions.</p>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/strong-and-weak-factor-assumptions/">Strong and weak factor assumptions</a></h4>
+    <h5>December 27, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/assumptions"><kbd class="item-tag">assumptions</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/introduction"><kbd class="item-tag">introduction</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/a-simple-introduction/">A Simple Introduction</a></h4>
+    <h5>December 24, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/introduction"><kbd class="item-tag">introduction</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+        <h4 class="page-header">Comments</h4>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "username" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
 </main>
 
         <footer>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Generate weak factors</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://zgong103.github.io/username.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.62.0" />
+        
+
+        
+
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
+
+        
+
+    </head>
+
+    <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Generate weak factors</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/username.github.io/">Home</a></li>
+                            
+                                <li><a href="/username.github.io/about/">About</a></li>
+                            
+                                <li><a href="/username.github.io/post/">Posts</a></li>
+                            
+                                <li><a href="/username.github.io/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:me@example.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/username/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/username/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/username/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.stackoverflow.com/username/"><i class="fa fa-stack-overflow"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Generate weak factors</h2>
+        <h5>December 28, 2019</h5>
+        
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/dgp"><kbd class="item-tag">DGP</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content"><p>Before introducing the methods to estimate the number of strong and weak factors for high dimensional data, let me first introduce how to <!-- raw HTML omitted --> genernate the weak factors <!-- raw HTML omitted --> in the DGP and corresponding R codes. Consider the factor model as:</p>
+<p>$$
+Y = X + \Sigma^{\frac{1}{2}}E = \Sigma^{\frac{1}{2}} (\sqrt{T} \hat{U} \hat{D} \hat{V}&rsquo; + E),
+$$</p>
+<p>where $\sqrt{T} \hat{U} \hat{D} \hat{V}^{'}$ is the singular value decomposition (SVD) for <code>$\Sigma^{-\frac{1}{2}}X$ with $\hat{U} \in \mathbb{R}^{N\times \min (N,T)}$, $\hat{V} \in \mathbb{R}^{T \times \min (N,T)}$,  $\hat{D}= \text{diag} (\hat{d}_{1}, \hat{d}_{2}, \cdots, \hat{d}_{\min (N, T)})$, $\hat{U}' \hat{U} = \hat{V}' \hat{V} = I_{\min (N, T)}$, and $\hat{d}_{1} \geq \hat{d}_{2} \geq , \cdots, \geq \hat{d}_{\min (N, T)}$.</code></p>
+<p>Using the guidance from RMT, we can generate the factors with different strength by specified the entries in $\hat{D}$. Specifically, in our DGP as an example, we generate one strong factor, two useful weak factors, one harmful weak factor and one undetectable weak factor by following the thresholds below:</p>
+<ul>
+<li>
+<p><strong>Undetectable factor</strong>, <code>$d^{2}_{i} &lt; \mu_{F}$</code>, the factor is asymptotically undetectable by PCA or MLE based methods.</p>
+</li>
+<li>
+<p><strong>Harmful weak factor</strong>, <code>$\mu_{F} &lt; d^{2}_{i} &lt; \mu_{F}^{*}$</code>, including the factor in the model will make the loss for recovering signal matrix $X$ larger.</p>
+</li>
+<li>
+<p><strong>Useful weak factor</strong>, <code>$\mu_{F}^{*} &lt; d^{2}_{i} = O(1)$</code>, including the factor will reduce the loss for recovering signal matrix $X$.</p>
+</li>
+<li>
+<p><strong>Strong factor</strong>, <code>$d^{2}_{i}$</code> grows proportionally to $N$.</p>
+</li>
+</ul>
+<p>where $\mu_{F}=\sqrt{\gamma}$ and
+$$\mu_{F}^{\star}=\frac{1+\gamma}{2}+\sqrt{\left(\frac{1+\gamma}{2}\right)^{2}+3 \gamma}, \quad  \text{for} \quad \frac{N}{T} \rightarrow \gamma$$</p>
+<p>are detection and estimation thresholds based on the results from RMT (Random matrix theory). For the error term $\Sigma^{\frac{1}{2}}E$ in the factor model, we assume homoscedastical noise <code>$\Sigma= I_{N}$</code> and <code>$E=\left(e_{i t}\right)_{N \times T}: e_{it} \stackrel{\text { iid }}{\sim} \mathcal{N}(0,1)$</code> for simplicity. Based on the factor model and the thresholds to generate weak factors, we can write the R code for our DGP as follow:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># Generate data</span>
+<span style="color:#75715e"># Imputs: N is the dimension, n is the sample size,</span>
+<span style="color:#75715e"># k is the number of factors</span>
+<span style="color:#a6e22e">rm</span>(list <span style="color:#f92672">=</span> <span style="color:#a6e22e">ls</span>())
+<span style="color:#a6e22e">set.seed</span>(<span style="color:#ae81ff">111</span>)
+
+DGP_weak <span style="color:#f92672">&lt;-</span>  <span style="color:#a6e22e">function </span>(N, T, k) {
+
+  r <span style="color:#f92672">&lt;-</span> T<span style="color:#f92672">/</span>N;
+
+
+  u_star <span style="color:#f92672">&lt;-</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(<span style="color:#a6e22e">sqrt</span>(r)));      <span style="color:#75715e"># compute the dectection threshold         </span>
+
+  u_starF <span style="color:#f92672">&lt;-</span> (<span style="color:#ae81ff">1</span><span style="color:#ae81ff">+1</span><span style="color:#f92672">/</span>r)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#a6e22e">sqrt</span>(((<span style="color:#ae81ff">1</span><span style="color:#ae81ff">+1</span><span style="color:#f92672">/</span>r)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)^2 <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">/</span>r);      <span style="color:#75715e"># compute the estimation threshold</span>
+
+<span style="color:#75715e">#  print(&#34;Detection threshod, estimating threshold:&#34;)</span>
+<span style="color:#75715e">#  print( c(u_star, u_starF))</span>
+
+  Sigma <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span>, N)                              <span style="color:#75715e"># white noise case</span>
+  noise <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N <span style="color:#f92672">*</span> T), nrow <span style="color:#f92672">=</span> N)         <span style="color:#75715e"># Generate the noise</span>
+
+  <span style="color:#75715e"># Generate orthogonal matrix to construct signal matrix</span>
+  U <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">randOrtho</span>(N,k)                      
+  V <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">randOrtho</span>(T,k)
+
+  <span style="color:#75715e"># Generate factors with different strength</span>
+  D <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(u_star<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>,(<span style="color:#f92672">-</span>u_star<span style="color:#f92672">+</span>u_starF)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> u_star,
+         u_starF<span style="color:#f92672">*</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1.5</span>, <span style="color:#ae81ff">2.5</span>), N <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.5</span>)
+  D <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">diag</span>(<span style="color:#a6e22e">sort</span>(D, decreasing <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>))
+
+  <span style="color:#75715e"># Construct the signal matrix X</span>
+  new.X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sqrt</span>(Sigma)^{<span style="color:#ae81ff">-1</span>} <span style="color:#f92672">*</span> U <span style="color:#f92672">%*%</span> <span style="color:#a6e22e">sqrt</span>(D) <span style="color:#f92672">%*%</span> <span style="color:#a6e22e">t</span>(V);
+  U1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">svd</span>(new.X, nu <span style="color:#f92672">=</span> k, nv <span style="color:#f92672">=</span> k)<span style="color:#f92672">$</span>u;
+  adjust.X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sqrt</span>(Sigma) <span style="color:#f92672">*</span> U1 <span style="color:#f92672">%*%</span> <span style="color:#a6e22e">sqrt</span>(D) <span style="color:#f92672">%*%</span> <span style="color:#a6e22e">t</span>(V)
+
+  Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sqrt</span>(T) <span style="color:#f92672">*</span> adjust.X <span style="color:#f92672">+</span> noise;                <span style="color:#75715e"># DGP for weak factors</span>
+
+  <span style="color:#75715e"># SVD for reweighted signal matrix</span>
+  svd.X <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">svd</span>(adjust.X, nu <span style="color:#f92672">=</span> k, nv <span style="color:#f92672">=</span> k);         
+  U <span style="color:#f92672">&lt;-</span> svd.X<span style="color:#f92672">$</span>u;
+  V <span style="color:#f92672">&lt;-</span> svd.X<span style="color:#f92672">$</span>v;
+  D <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">diag</span>(svd.X<span style="color:#f92672">$</span>d[1<span style="color:#f92672">:</span>k]^2);
+
+  <span style="color:#a6e22e">return </span>(<span style="color:#a6e22e">list</span>(Y<span style="color:#f92672">=</span>Y, D <span style="color:#f92672">=</span> <span style="color:#a6e22e">sqrt</span>(D), U<span style="color:#f92672">=</span>U, V<span style="color:#f92672">=</span>V))
+}</code></pre></div>
+<p>Function for generating the orthogonal matrix $U$ and $V$:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">randOrtho <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(N, k) {
+  Z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">rnorm</span>(N <span style="color:#f92672">*</span> k), nrow<span style="color:#f92672">=</span>N);
+  Q1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qr.Q</span>(<span style="color:#a6e22e">qr</span>(Z))[, <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>k];            <span style="color:#75715e"># QR decomposition</span>
+  <span style="color:#a6e22e">if </span>(k<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>) {
+    S <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">sample</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">-1</span>), k, replace<span style="color:#f92672">=</span>T)
+    <span style="color:#a6e22e">return</span>(S<span style="color:#f92672">*</span>Q1)
+  }
+  else {
+    S <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">diag</span>(<span style="color:#a6e22e">sample</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">-1</span>),k,replace<span style="color:#f92672">=</span>T));
+    <span style="color:#a6e22e">return</span>(Q1<span style="color:#f92672">%*%</span>S)
+  }
+}</code></pre></div>
+<p>Example: we can use the R codes above to generate a signal matrix $Y$ with $N=T=50$ and five factors, in which we have one strong factor, two useful weak factors, one harmful weak factor and one undetectable weak factor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">Y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">DGP_weak</span>(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">5</span>)
+
+(Y<span style="color:#f92672">$</span>D)^2
+
+     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>] [,<span style="color:#ae81ff">3</span>] [,<span style="color:#ae81ff">4</span>] [,<span style="color:#ae81ff">5</span>]
+[1,]   <span style="color:#ae81ff">75</span>  <span style="color:#ae81ff">0.0</span>  <span style="color:#ae81ff">0.0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.0</span>
+[2,]    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">7.5</span>  <span style="color:#ae81ff">0.0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.0</span>
+[3,]    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.0</span>  <span style="color:#ae81ff">4.5</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.0</span>
+[4,]    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.0</span>  <span style="color:#ae81ff">0.0</span>    <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">0.0</span>
+[5,]    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.0</span>  <span style="color:#ae81ff">0.0</span>    <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">0.5</span></code></pre></div>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/ne-method/">NE Method</a></h4>
+    <h5>December 30, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/bcv-method/">BCV Method</a></h4>
+    <h5>December 30, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+        <h4 class="page-header">Comments</h4>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "username" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
+        </footer>
+
+        
+
+    </body>
+
+</html>
+

@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Third year project</title>
-    <link>https://zgong103.github.io/username.github.io/post/</link>
-    <description>Recent content in Posts on Third year project</description>
+    <title>methods on Third year project</title>
+    <link>https://zgong103.github.io/username.github.io/tags/methods/</link>
+    <description>Recent content in methods on Third year project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://zgong103.github.io/username.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zgong103.github.io/username.github.io/tags/methods/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Project 1</title>
+      <link>https://zgong103.github.io/username.github.io/project/project1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgong103.github.io/username.github.io/project/project1/</guid>
+      <description>My third year paper.</description>
+    </item>
     
     <item>
       <title>BCV Method</title>
@@ -65,46 +74,6 @@ and the following loss function:
 \begin{equation} \label{eq:3.3}\mathrm{IC}(r) = V(r) + rg(N,T) \quad \text{or} \quad \log (V(r)) + rg(N,T).\end{equation}
 The penalty function $g(N,T)$ satisfies two condition:
  $g(N, T) \rightarrow 0$, $C_{NT}^2 g(N,T)$ $\rightarrow \infty$,  as $N, T \rightarrow \infty$, where $C_{NT} = \min {\sqrt{N}, \sqrt{T}}$.</description>
-    </item>
-    
-    <item>
-      <title>Generate weak factors</title>
-      <link>https://zgong103.github.io/username.github.io/post/generate-weak-factors/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/generate-weak-factors/</guid>
-      <description>Before introducing the methods to estimate the number of strong and weak factors for high dimensional data, let me first introduce how to genernate the weak factors in the DGP and corresponding R codes. Consider the factor model as:
-$$ Y = X + \Sigma^{\frac{1}{2}}E = \Sigma^{\frac{1}{2}} (\sqrt{T} \hat{U} \hat{D} \hat{V}&amp;rsquo; + E), $$
-where $\sqrt{T} \hat{U} \hat{D} \hat{V}^{&#39;}$ is the singular value decomposition (SVD) for $\Sigma^{-\frac{1}{2}}X$ with $\hat{U} \in \mathbb{R}^{N\times \min (N,T)}$, $\hat{V} \in \mathbb{R}^{T \times \min (N,T)}$, $\hat{D}= \text{diag} (\hat{d}_{1}, \hat{d}_{2}, \cdots, \hat{d}_{\min (N, T)})$, $\hat{U}&#39; \hat{U} = \hat{V}&#39; \hat{V} = I_{\min (N, T)}$, and $\hat{d}_{1} \geq \hat{d}_{2} \geq , \cdots, \geq \hat{d}_{\min (N, T)}$.</description>
-    </item>
-    
-    <item>
-      <title>Strong and weak factor assumptions</title>
-      <link>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</link>
-      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/strong-and-weak-factor-assumptions/</guid>
-      <description>Strong and weak factor assumptions In this section, we briefly go over the strong and weak factor assumptions. Assuming factors $F_{t}$ and noise $e_{t}$ are uncorrelated and have zero mean, and normalization $\mathbb{E}(F_{t}F_{t}^{&#39;}) = I_{r}$ for identification, then the population covariance matrix of the factor model (1) can be expressed as \begin{equation} \Sigma_{Y} = LL^{&#39;} + \Sigma_{e}, \quad \quad \quad (2) \end{equation} where $\Sigma_{Y}$ and $\Sigma_{e}$ are the $N \times N$ population covariance matrix of $Y_{t}$ and $e_{t}$, respectively.</description>
-    </item>
-    
-    <item>
-      <title>Basic Factor Model</title>
-      <link>https://zgong103.github.io/username.github.io/post/basic-factor-model/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/basic-factor-model/</guid>
-      <description>Basic factor model Factor analysis based on a model that separates the observed data into an unobserved systematic part (signal part) and an unobserved error part (noise part). The systematic part captures the main information of the data so that we want to separate it from noise part. Specifically, let $Y_{it}$ be the observed data for the $i$-th cross-section unit at time $t$, for $i=1,2,\cdots, N$ and $t=1,\cdots,T$. The factor model for $Y_{it}$ is given by \begin{equation} Y_{it} = L_{i}^{&#39;} F_{t} + e_{it},</description>
-    </item>
-    
-    <item>
-      <title>A Simple Introduction</title>
-      <link>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</link>
-      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgong103.github.io/username.github.io/post/a-simple-introduction/</guid>
-      <description>Introduction In the following posts, we provide a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:
-  Methods for estmating the number of strong factors:
- IC Method: information criteria based methods (Bai and Ng, 2002).</description>
     </item>
     
   </channel>

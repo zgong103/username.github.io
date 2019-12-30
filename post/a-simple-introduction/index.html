@@ -71,15 +71,34 @@
 
         
 
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
 
         
 
     </head>
 
     <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
         
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -130,7 +149,7 @@
 
     <div>
         <h2>A Simple Introduction</h2>
-        <h5>September 28, 2014</h5>
+        <h5>December 24, 2019</h5>
         
 <a href="https://zgong103.github.io/username.github.io/tags/introduction"><kbd class="item-tag">introduction</kbd></a>
 
@@ -138,12 +157,12 @@
     </div>
 
     <div align="start" class="content"><h2 id="introduction">Introduction</h2>
-<p>In this page, we first provides a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:</p>
+<p>In the following posts, we provide a systematic review and explanations for the R codes that used in current popular methods for choosing the number of strong and weak factors in high dimensional data. Examples for how to apply those methods in practice are included. Specifically, those methods we reviewed are lists as follow:</p>
 <ul>
 <li>
 <p>Methods for estmating the number of strong factors:</p>
 <ul>
-<li><a href="http://localhost:1313/factor.github.io/post/goisforlovers/">IC Method: information criteria based methods (Bai and Ng, 2002).</a></li>
+<li><a href="http://zgong103.github.io/factor.github.io/post/goisforlovers/">IC Method: information criteria based methods (Bai and Ng, 2002).</a></li>
 <li><a href="#ER">ER Method: eigenvalue ratio based method (Ahn and Horenstein, 2013).</a></li>
 <li><a href="#ED">ED Method: eigenvalue difference based method (Onatski, 2010).</a></li>
 </ul>
@@ -161,6 +180,47 @@
 
     
     
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/strong-and-weak-factor-assumptions/">Strong and weak factor assumptions</a></h4>
+    <h5>December 27, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/assumptions"><kbd class="item-tag">assumptions</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/introduction"><kbd class="item-tag">introduction</kbd></a>
+
+
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/username.github.io/post/basic-factor-model/">Basic Factor Model</a></h4>
+    <h5>December 26, 2019</h5>
+    
+<a href="https://zgong103.github.io/username.github.io/tags/introduction"><kbd class="item-tag">introduction</kbd></a>
+
+<a href="https://zgong103.github.io/username.github.io/tags/factor-model"><kbd class="item-tag">factor model</kbd></a>
+
+
+
+</div>
+ 
     
 
     
@@ -192,11 +252,11 @@
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
         </footer>
 
         
 
-        
     </body>
 
 </html>

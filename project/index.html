@@ -74,15 +74,34 @@
 
         
 
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
+
+
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">   
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
 
         
 
     </head>
 
     <body>
+      <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
         
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -137,98 +156,19 @@
 
     
     
-        
-        
-            
-        
-    
     
 
     
       
 
-    <h4><a href="https://github.com/#/#/">Project 1</a></h4>
-    <h5>Lorem ipsum dolor sit amet</h5>
+    <h4><a href="/username.github.io/project/project1/">Project 1</a></h4>
+    <h5>Non-robustness issue for factor estimation</h5>
     
-<a href="https://zgong103.github.io/username.github.io/tags/go"><kbd class="item-tag">go</kbd></a>
+<a href="https://zgong103.github.io/username.github.io/tags/methods"><kbd class="item-tag">methods</kbd></a>
 
-<a href="https://zgong103.github.io/username.github.io/tags/golang"><kbd class="item-tag">golang</kbd></a>
+<a href="https://zgong103.github.io/username.github.io/tags/strong"><kbd class="item-tag">strong</kbd></a>
 
-<a href="https://zgong103.github.io/username.github.io/tags/hugo"><kbd class="item-tag">hugo</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-        
-        
-            
-        
-    
-    
-
-    
-      
-
-    <h4><a href="https://github.com/#/#/">Project 2</a></h4>
-    <h5>Consectetur adipiscing elit</h5>
-    
-<a href="https://zgong103.github.io/username.github.io/tags/html"><kbd class="item-tag">html</kbd></a>
-
-<a href="https://zgong103.github.io/username.github.io/tags/css"><kbd class="item-tag">css</kbd></a>
-
-<a href="https://zgong103.github.io/username.github.io/tags/js"><kbd class="item-tag">js</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-        
-        
-            
-        
-    
-    
-
-    
-      
-
-    <h4><a href="https://github.com/#/#/">Project 3</a></h4>
-    <h5>Cras felis sapien</h5>
-    
-<a href="https://zgong103.github.io/username.github.io/tags/bootstrap"><kbd class="item-tag">bootstrap</kbd></a>
-
-<a href="https://zgong103.github.io/username.github.io/tags/responsive"><kbd class="item-tag">responsive</kbd></a>
-
-
-
-</div>
-  <div class="item">
-
-    
-    
-        
-        
-            
-        
-    
-    
-
-    
-      
-
-    <h4><a href="https://github.com/#/#/">Project 4</a></h4>
-    <h5>Pellentesque eu lacinia id</h5>
-    
-<a href="https://zgong103.github.io/username.github.io/tags/highlight-js"><kbd class="item-tag">highlight-js</kbd></a>
-
-<a href="https://zgong103.github.io/username.github.io/tags/syntax-highlighting"><kbd class="item-tag">syntax-highlighting</kbd></a>
+<a href="https://zgong103.github.io/username.github.io/tags/weak"><kbd class="item-tag">weak</kbd></a>
 
 
 
@@ -241,11 +181,11 @@
 
         <footer>
             <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+
         </footer>
 
         
 
-        
     </body>
 
 </html>
